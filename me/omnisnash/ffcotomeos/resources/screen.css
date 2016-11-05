@@ -1,0 +1,14 @@
+.box {
+    -fx-spacing : 2em;
+    -fx-padding: 1em;
+}
+
+.gridpane {
+    -fx-hgap : 1em;
+    -fx-vgap: 1em;
+    -fx-grid-lines-visible: false;
+}
+
+.list-view {
+    -fx-pref-height : 10em;
+}
