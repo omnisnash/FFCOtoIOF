@@ -5,13 +5,11 @@ import javafx.beans.binding.BooleanBinding;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Orientation;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import me.omnisnash.ffcotomeos.models.Organisation;
 
 import java.io.File;
 
@@ -70,6 +68,8 @@ public class FtmGui extends VBox
         hbxExtract.getChildren().add(btnExtract);
 
         ListView<String> lstLogs = new ListView<>(logs);
+        lstLogs.setMaxHeight(Double.MAX_VALUE);
+        VBox.setVgrow(lstLogs, Priority.ALWAYS);
         getChildren().add(lstLogs);
     }
 
