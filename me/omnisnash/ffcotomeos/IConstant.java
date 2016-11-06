@@ -2,8 +2,8 @@ package me.omnisnash.ffcotomeos;
 
 public class IConstant
 {
-    public static final String APPLICATION_NAME = "FFCO to MeOs";
-    public static final String APPLICATION_LINK = "gitlab.com/omnisnash/FFCOtoMeos";
+    public static final String APPLICATION_NAME = "FFCO to IOF";
+    public static final String APPLICATION_LINK = "gitlab.com/omnisnash/FFCOtoIOF";
     public static final String IOF_VERSION = "3.0";
 
     public static final String DEFAULT_COMPETITOR_FILENAME = "competitors.xml";
