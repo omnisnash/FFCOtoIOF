@@ -8,23 +8,18 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         Defines extra information for a relay leg.
- *       
- * 
+ * Defines extra information for a relay leg.
+ * <p>
+ * <p>
  * <p>Classe Java pour Leg complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Leg">
  *   &lt;complexContent>
@@ -39,15 +34,14 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Leg", propOrder = {
-    "name",
-    "extensions"
+        "name",
+        "extensions"
 })
-public class Leg {
+public class Leg
+{
 
     @XmlElement(name = "Name")
     protected String name;
@@ -60,105 +54,101 @@ public class Leg {
 
     /**
      * Obtient la valeur de la propriété name.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
     /**
      * Définit la valeur de la propriété name.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setName(String value) {
+    public void setName(String value)
+    {
         this.name = value;
     }
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété minNumberOfCompetitors.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getMinNumberOfCompetitors() {
-        if (minNumberOfCompetitors == null) {
+    public BigInteger getMinNumberOfCompetitors()
+    {
+        if (minNumberOfCompetitors == null)
+        {
             return new BigInteger("1");
-        } else {
+        } else
+        {
             return minNumberOfCompetitors;
         }
     }
 
     /**
      * Définit la valeur de la propriété minNumberOfCompetitors.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setMinNumberOfCompetitors(BigInteger value) {
+    public void setMinNumberOfCompetitors(BigInteger value)
+    {
         this.minNumberOfCompetitors = value;
     }
 
     /**
      * Obtient la valeur de la propriété maxNumberOfCompetitors.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getMaxNumberOfCompetitors() {
-        if (maxNumberOfCompetitors == null) {
+    public BigInteger getMaxNumberOfCompetitors()
+    {
+        if (maxNumberOfCompetitors == null)
+        {
             return new BigInteger("1");
-        } else {
+        } else
+        {
             return maxNumberOfCompetitors;
         }
     }
 
     /**
      * Définit la valeur de la propriété maxNumberOfCompetitors.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setMaxNumberOfCompetitors(BigInteger value) {
+    public void setMaxNumberOfCompetitors(BigInteger value)
+    {
         this.maxNumberOfCompetitors = value;
     }
 

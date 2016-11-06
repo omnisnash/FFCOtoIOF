@@ -8,28 +8,22 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
- * 
- *         A control included in a particular course.
- *       
- * 
+ * A control included in a particular course.
+ * <p>
+ * <p>
  * <p>Classe Java pour CourseControl complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="CourseControl">
  *   &lt;complexContent>
@@ -61,19 +55,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CourseControl", propOrder = {
-    "control",
-    "mapText",
-    "mapTextPosition",
-    "legLength",
-    "score",
-    "extensions"
+        "control",
+        "mapText",
+        "mapTextPosition",
+        "legLength",
+        "score",
+        "extensions"
 })
-public class CourseControl {
+public class CourseControl
+{
 
     @XmlElement(name = "Control", required = true)
     protected List<String> control;
@@ -102,28 +95,28 @@ public class CourseControl {
 
     /**
      * Gets the value of the control property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the control property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getControl().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
-    public List<String> getControl() {
-        if (control == null) {
+    public List<String> getControl()
+    {
+        if (control == null)
+        {
             control = new ArrayList<String>();
         }
         return this.control;
@@ -131,249 +124,233 @@ public class CourseControl {
 
     /**
      * Obtient la valeur de la propriété mapText.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getMapText() {
+    public String getMapText()
+    {
         return mapText;
     }
 
     /**
      * Définit la valeur de la propriété mapText.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setMapText(String value) {
+    public void setMapText(String value)
+    {
         this.mapText = value;
     }
 
     /**
      * Obtient la valeur de la propriété mapTextPosition.
-     * 
-     * @return
-     *     possible object is
-     *     {@link MapPosition }
-     *     
+     *
+     * @return possible object is
+     * {@link MapPosition }
      */
-    public MapPosition getMapTextPosition() {
+    public MapPosition getMapTextPosition()
+    {
         return mapTextPosition;
     }
 
     /**
      * Définit la valeur de la propriété mapTextPosition.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link MapPosition }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link MapPosition }
      */
-    public void setMapTextPosition(MapPosition value) {
+    public void setMapTextPosition(MapPosition value)
+    {
         this.mapTextPosition = value;
     }
 
     /**
      * Obtient la valeur de la propriété legLength.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getLegLength() {
+    public Double getLegLength()
+    {
         return legLength;
     }
 
     /**
      * Définit la valeur de la propriété legLength.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setLegLength(Double value) {
+    public void setLegLength(Double value)
+    {
         this.legLength = value;
     }
 
     /**
      * Obtient la valeur de la propriété score.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getScore() {
+    public Double getScore()
+    {
         return score;
     }
 
     /**
      * Définit la valeur de la propriété score.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setScore(Double value) {
+    public void setScore(Double value)
+    {
         this.score = value;
     }
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété type.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ControlType }
-     *     
+     *
+     * @return possible object is
+     * {@link ControlType }
      */
-    public ControlType getType() {
+    public ControlType getType()
+    {
         return type;
     }
 
     /**
      * Définit la valeur de la propriété type.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ControlType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ControlType }
      */
-    public void setType(ControlType value) {
+    public void setType(ControlType value)
+    {
         this.type = value;
     }
 
     /**
      * Obtient la valeur de la propriété randomOrder.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
-    public boolean isRandomOrder() {
-        if (randomOrder == null) {
+    public boolean isRandomOrder()
+    {
+        if (randomOrder == null)
+        {
             return false;
-        } else {
+        } else
+        {
             return randomOrder;
         }
     }
 
     /**
      * Définit la valeur de la propriété randomOrder.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
-    public void setRandomOrder(Boolean value) {
+    public void setRandomOrder(Boolean value)
+    {
         this.randomOrder = value;
     }
 
     /**
      * Obtient la valeur de la propriété specialInstruction.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getSpecialInstruction() {
-        if (specialInstruction == null) {
+    public String getSpecialInstruction()
+    {
+        if (specialInstruction == null)
+        {
             return "None";
-        } else {
+        } else
+        {
             return specialInstruction;
         }
     }
 
     /**
      * Définit la valeur de la propriété specialInstruction.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setSpecialInstruction(String value) {
+    public void setSpecialInstruction(String value)
+    {
         this.specialInstruction = value;
     }
 
     /**
      * Obtient la valeur de la propriété tapedRouteLength.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getTapedRouteLength() {
+    public Double getTapedRouteLength()
+    {
         return tapedRouteLength;
     }
 
     /**
      * Définit la valeur de la propriété tapedRouteLength.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setTapedRouteLength(Double value) {
+    public void setTapedRouteLength(Double value)
+    {
         this.tapedRouteLength = value;
     }
 
     /**
      * Obtient la valeur de la propriété modifyTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getModifyTime() {
+    public XMLGregorianCalendar getModifyTime()
+    {
         return modifyTime;
     }
 
     /**
      * Définit la valeur de la propriété modifyTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setModifyTime(XMLGregorianCalendar value) {
+    public void setModifyTime(XMLGregorianCalendar value)
+    {
         this.modifyTime = value;
     }
 

@@ -8,27 +8,21 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         Defines a course, i.e. a number of controls including start and finish.
- *       
- * 
+ * Defines a course, i.e. a number of controls including start and finish.
+ * <p>
+ * <p>
  * <p>Classe Java pour Course complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Course">
  *   &lt;complexContent>
@@ -49,21 +43,20 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Course", propOrder = {
-    "id",
-    "name",
-    "courseFamily",
-    "length",
-    "climb",
-    "courseControl",
-    "mapId",
-    "extensions"
+        "id",
+        "name",
+        "courseFamily",
+        "length",
+        "climb",
+        "courseControl",
+        "mapId",
+        "extensions"
 })
-public class Course {
+public class Course
+{
 
     @XmlElement(name = "Id")
     protected Id id;
@@ -89,148 +82,138 @@ public class Course {
 
     /**
      * Obtient la valeur de la propriété id.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Id }
-     *     
+     *
+     * @return possible object is
+     * {@link Id }
      */
-    public Id getId() {
+    public Id getId()
+    {
         return id;
     }
 
     /**
      * Définit la valeur de la propriété id.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Id }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Id }
      */
-    public void setId(Id value) {
+    public void setId(Id value)
+    {
         this.id = value;
     }
 
     /**
      * Obtient la valeur de la propriété name.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
     /**
      * Définit la valeur de la propriété name.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setName(String value) {
+    public void setName(String value)
+    {
         this.name = value;
     }
 
     /**
      * Obtient la valeur de la propriété courseFamily.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getCourseFamily() {
+    public String getCourseFamily()
+    {
         return courseFamily;
     }
 
     /**
      * Définit la valeur de la propriété courseFamily.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setCourseFamily(String value) {
+    public void setCourseFamily(String value)
+    {
         this.courseFamily = value;
     }
 
     /**
      * Obtient la valeur de la propriété length.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getLength() {
+    public Double getLength()
+    {
         return length;
     }
 
     /**
      * Définit la valeur de la propriété length.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setLength(Double value) {
+    public void setLength(Double value)
+    {
         this.length = value;
     }
 
     /**
      * Obtient la valeur de la propriété climb.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getClimb() {
+    public Double getClimb()
+    {
         return climb;
     }
 
     /**
      * Définit la valeur de la propriété climb.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setClimb(Double value) {
+    public void setClimb(Double value)
+    {
         this.climb = value;
     }
 
     /**
      * Gets the value of the courseControl property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the courseControl property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCourseControl().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CourseControl }
-     * 
-     * 
      */
-    public List<CourseControl> getCourseControl() {
-        if (courseControl == null) {
+    public List<CourseControl> getCourseControl()
+    {
+        if (courseControl == null)
+        {
             courseControl = new ArrayList<CourseControl>();
         }
         return this.courseControl;
@@ -238,97 +221,89 @@ public class Course {
 
     /**
      * Obtient la valeur de la propriété mapId.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getMapId() {
+    public BigInteger getMapId()
+    {
         return mapId;
     }
 
     /**
      * Définit la valeur de la propriété mapId.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setMapId(BigInteger value) {
+    public void setMapId(BigInteger value)
+    {
         this.mapId = value;
     }
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété numberOfCompetitors.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getNumberOfCompetitors() {
+    public BigInteger getNumberOfCompetitors()
+    {
         return numberOfCompetitors;
     }
 
     /**
      * Définit la valeur de la propriété numberOfCompetitors.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setNumberOfCompetitors(BigInteger value) {
+    public void setNumberOfCompetitors(BigInteger value)
+    {
         this.numberOfCompetitors = value;
     }
 
     /**
      * Obtient la valeur de la propriété modifyTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getModifyTime() {
+    public XMLGregorianCalendar getModifyTime()
+    {
         return modifyTime;
     }
 
     /**
      * Définit la valeur de la propriété modifyTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setModifyTime(XMLGregorianCalendar value) {
+    public void setModifyTime(XMLGregorianCalendar value)
+    {
         this.modifyTime = value;
     }
 

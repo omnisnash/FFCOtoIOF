@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java pour RaceDiscipline.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * <p>
  * <pre>
@@ -29,11 +29,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "RaceDiscipline")
 @XmlEnum
-public enum RaceDiscipline {
+public enum RaceDiscipline
+{
 
     @XmlEnumValue("Sprint")
     SPRINT("Sprint"),
@@ -47,21 +47,26 @@ public enum RaceDiscipline {
     OTHER("Other");
     private final String value;
 
-    RaceDiscipline(String v) {
+    RaceDiscipline(String v)
+    {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
-    public static RaceDiscipline fromValue(String v) {
-        for (RaceDiscipline c: RaceDiscipline.values()) {
-            if (c.value.equals(v)) {
+    public static RaceDiscipline fromValue(String v)
+    {
+        for (RaceDiscipline c : RaceDiscipline.values())
+        {
+            if (c.value.equals(v))
+            {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value()
+    {
+        return value;
     }
 
 }

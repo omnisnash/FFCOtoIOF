@@ -8,24 +8,18 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         Contains information about a fee that has been assigned to a competitor or a team, and the amount that has been paid.
- *       
- * 
+ * Contains information about a fee that has been assigned to a competitor or a team, and the amount that has been paid.
+ * <p>
+ * <p>
  * <p>Classe Java pour AssignedFee complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="AssignedFee">
  *   &lt;complexContent>
@@ -40,16 +34,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AssignedFee", propOrder = {
-    "fee",
-    "paidAmount",
-    "extensions"
+        "fee",
+        "paidAmount",
+        "extensions"
 })
-public class AssignedFee {
+public class AssignedFee
+{
 
     @XmlElement(name = "Fee", required = true)
     protected Fee fee;
@@ -63,97 +56,89 @@ public class AssignedFee {
 
     /**
      * Obtient la valeur de la propriété fee.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Fee }
-     *     
+     *
+     * @return possible object is
+     * {@link Fee }
      */
-    public Fee getFee() {
+    public Fee getFee()
+    {
         return fee;
     }
 
     /**
      * Définit la valeur de la propriété fee.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Fee }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Fee }
      */
-    public void setFee(Fee value) {
+    public void setFee(Fee value)
+    {
         this.fee = value;
     }
 
     /**
      * Obtient la valeur de la propriété paidAmount.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Amount }
-     *     
+     *
+     * @return possible object is
+     * {@link Amount }
      */
-    public Amount getPaidAmount() {
+    public Amount getPaidAmount()
+    {
         return paidAmount;
     }
 
     /**
      * Définit la valeur de la propriété paidAmount.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Amount }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Amount }
      */
-    public void setPaidAmount(Amount value) {
+    public void setPaidAmount(Amount value)
+    {
         this.paidAmount = value;
     }
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété modifyTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getModifyTime() {
+    public XMLGregorianCalendar getModifyTime()
+    {
         return modifyTime;
     }
 
     /**
      * Définit la valeur de la propriété modifyTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setModifyTime(XMLGregorianCalendar value) {
+    public void setModifyTime(XMLGregorianCalendar value)
+    {
         this.modifyTime = value;
     }
 

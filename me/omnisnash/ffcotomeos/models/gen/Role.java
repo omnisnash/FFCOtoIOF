@@ -8,22 +8,17 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
- * 
- *         A role defines a connection between a person and some kind of task, responsibility or engagement, e.g. being a course setter at an event.
- *       
- * 
+ * A role defines a connection between a person and some kind of task, responsibility or engagement, e.g. being a course setter at an event.
+ * <p>
+ * <p>
  * <p>Classe Java pour Role complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Role">
  *   &lt;complexContent>
@@ -36,14 +31,13 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Role", propOrder = {
-    "person"
+        "person"
 })
-public class Role {
+public class Role
+{
 
     @XmlElement(name = "Person", required = true)
     protected Person person;
@@ -52,49 +46,45 @@ public class Role {
 
     /**
      * Obtient la valeur de la propriété person.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Person }
-     *     
+     *
+     * @return possible object is
+     * {@link Person }
      */
-    public Person getPerson() {
+    public Person getPerson()
+    {
         return person;
     }
 
     /**
      * Définit la valeur de la propriété person.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Person }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Person }
      */
-    public void setPerson(Person value) {
+    public void setPerson(Person value)
+    {
         this.person = value;
     }
 
     /**
      * Obtient la valeur de la propriété type.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getType() {
+    public String getType()
+    {
         return type;
     }
 
     /**
      * Définit la valeur de la propriété type.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setType(String value) {
+    public void setType(String value)
+    {
         this.type = value;
     }
 

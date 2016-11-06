@@ -8,23 +8,18 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         Defines a point in time which either is known by date and time, or just by date. May be used for event dates, when the event date is decided before the time of the first start.
- *       
- * 
+ * Defines a point in time which either is known by date and time, or just by date. May be used for event dates, when the event date is decided before the time of the first start.
+ * <p>
+ * <p>
  * <p>Classe Java pour DateAndOptionalTime complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="DateAndOptionalTime">
  *   &lt;complexContent>
@@ -37,15 +32,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DateAndOptionalTime", propOrder = {
-    "date",
-    "time"
+        "date",
+        "time"
 })
-public class DateAndOptionalTime {
+public class DateAndOptionalTime
+{
 
     @XmlElement(name = "Date", required = true)
     @XmlSchemaType(name = "date")
@@ -56,49 +50,45 @@ public class DateAndOptionalTime {
 
     /**
      * Obtient la valeur de la propriété date.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getDate() {
+    public XMLGregorianCalendar getDate()
+    {
         return date;
     }
 
     /**
      * Définit la valeur de la propriété date.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setDate(XMLGregorianCalendar value) {
+    public void setDate(XMLGregorianCalendar value)
+    {
         this.date = value;
     }
 
     /**
      * Obtient la valeur de la propriété time.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getTime() {
+    public XMLGregorianCalendar getTime()
+    {
         return time;
     }
 
     /**
      * Définit la valeur de la propriété time.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setTime(XMLGregorianCalendar value) {
+    public void setTime(XMLGregorianCalendar value)
+    {
         this.time = value;
     }
 

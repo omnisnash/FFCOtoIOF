@@ -8,27 +8,20 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import java.lang.*;
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         The start list of a single class containing either individual start times or team start times.
- *       
- * 
+ * The start list of a single class containing either individual start times or team start times.
+ * <p>
+ * <p>
  * <p>Classe Java pour ClassStart complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ClassStart">
  *   &lt;complexContent>
@@ -47,19 +40,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ClassStart", propOrder = {
-    "clazz",
-    "course",
-    "startName",
-    "personStart",
-    "teamStart",
-    "extensions"
+        "clazz",
+        "course",
+        "startName",
+        "personStart",
+        "teamStart",
+        "extensions"
 })
-public class ClassStart {
+public class ClassStart
+{
 
     @XmlElement(name = "Class", required = true)
     protected Class clazz;
@@ -81,52 +73,50 @@ public class ClassStart {
 
     /**
      * Obtient la valeur de la propriété clazz.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Class }
-     *     
+     *
+     * @return possible object is
+     * {@link Class }
      */
-    public Class getClazz() {
+    public Class getClazz()
+    {
         return clazz;
     }
 
     /**
      * Définit la valeur de la propriété clazz.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Class }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Class }
      */
-    public void setClazz(Class value) {
+    public void setClazz(Class value)
+    {
         this.clazz = value;
     }
 
     /**
      * Gets the value of the course property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the course property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCourse().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SimpleRaceCourse }
-     * 
-     * 
      */
-    public List<SimpleRaceCourse> getCourse() {
-        if (course == null) {
+    public List<SimpleRaceCourse> getCourse()
+    {
+        if (course == null)
+        {
             course = new ArrayList<SimpleRaceCourse>();
         }
         return this.course;
@@ -134,28 +124,28 @@ public class ClassStart {
 
     /**
      * Gets the value of the startName property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the startName property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getStartName().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link StartName }
-     * 
-     * 
      */
-    public List<StartName> getStartName() {
-        if (startName == null) {
+    public List<StartName> getStartName()
+    {
+        if (startName == null)
+        {
             startName = new ArrayList<StartName>();
         }
         return this.startName;
@@ -163,28 +153,28 @@ public class ClassStart {
 
     /**
      * Gets the value of the personStart property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the personStart property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPersonStart().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PersonStart }
-     * 
-     * 
      */
-    public List<PersonStart> getPersonStart() {
-        if (personStart == null) {
+    public List<PersonStart> getPersonStart()
+    {
+        if (personStart == null)
+        {
             personStart = new ArrayList<PersonStart>();
         }
         return this.personStart;
@@ -192,28 +182,28 @@ public class ClassStart {
 
     /**
      * Gets the value of the teamStart property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the teamStart property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTeamStart().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TeamStart }
-     * 
-     * 
      */
-    public List<TeamStart> getTeamStart() {
-        if (teamStart == null) {
+    public List<TeamStart> getTeamStart()
+    {
+        if (teamStart == null)
+        {
             teamStart = new ArrayList<TeamStart>();
         }
         return this.teamStart;
@@ -221,77 +211,73 @@ public class ClassStart {
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété timeResolution.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public double getTimeResolution() {
-        if (timeResolution == null) {
-            return  1.0D;
-        } else {
+    public double getTimeResolution()
+    {
+        if (timeResolution == null)
+        {
+            return 1.0D;
+        } else
+        {
             return timeResolution;
         }
     }
 
     /**
      * Définit la valeur de la propriété timeResolution.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setTimeResolution(Double value) {
+    public void setTimeResolution(Double value)
+    {
         this.timeResolution = value;
     }
 
     /**
      * Obtient la valeur de la propriété modifyTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getModifyTime() {
+    public XMLGregorianCalendar getModifyTime()
+    {
         return modifyTime;
     }
 
     /**
      * Définit la valeur de la propriété modifyTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setModifyTime(XMLGregorianCalendar value) {
+    public void setModifyTime(XMLGregorianCalendar value)
+    {
         this.modifyTime = value;
     }
 

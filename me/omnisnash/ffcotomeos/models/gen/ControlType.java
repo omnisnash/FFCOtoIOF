@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java pour ControlType.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * <p>
  * <pre>
@@ -29,11 +29,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "ControlType")
 @XmlEnum
-public enum ControlType {
+public enum ControlType
+{
 
     @XmlEnumValue("Control")
     CONTROL("Control"),
@@ -47,21 +47,26 @@ public enum ControlType {
     END_OF_MARKED_ROUTE("EndOfMarkedRoute");
     private final String value;
 
-    ControlType(String v) {
+    ControlType(String v)
+    {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
-    public static ControlType fromValue(String v) {
-        for (ControlType c: ControlType.values()) {
-            if (c.value.equals(v)) {
+    public static ControlType fromValue(String v)
+    {
+        for (ControlType c : ControlType.values())
+        {
+            if (c.value.equals(v))
+            {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value()
+    {
+        return value;
     }
 
 }

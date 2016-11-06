@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java pour EventForm.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * <p>
  * <pre>
@@ -27,11 +27,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "EventForm")
 @XmlEnum
-public enum EventForm {
+public enum EventForm
+{
 
     @XmlEnumValue("Individual")
     INDIVIDUAL("Individual"),
@@ -41,21 +41,26 @@ public enum EventForm {
     RELAY("Relay");
     private final String value;
 
-    EventForm(String v) {
+    EventForm(String v)
+    {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
-    public static EventForm fromValue(String v) {
-        for (EventForm c: EventForm.values()) {
-            if (c.value.equals(v)) {
+    public static EventForm fromValue(String v)
+    {
+        for (EventForm c : EventForm.values())
+        {
+            if (c.value.equals(v))
+            {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value()
+    {
+        return value;
     }
 
 }

@@ -8,23 +8,18 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         Defines a course, excluding controls.
- *       
- * 
+ * Defines a course, excluding controls.
+ * <p>
+ * <p>
  * <p>Classe Java pour SimpleCourse complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="SimpleCourse">
  *   &lt;complexContent>
@@ -41,22 +36,21 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SimpleCourse", propOrder = {
-    "id",
-    "name",
-    "courseFamily",
-    "length",
-    "climb",
-    "numberOfControls"
+        "id",
+        "name",
+        "courseFamily",
+        "length",
+        "climb",
+        "numberOfControls"
 })
 @XmlSeeAlso({
-    SimpleRaceCourse.class
+        SimpleRaceCourse.class
 })
-public class SimpleCourse {
+public class SimpleCourse
+{
 
     @XmlElement(name = "Id")
     protected Id id;
@@ -73,145 +67,133 @@ public class SimpleCourse {
 
     /**
      * Obtient la valeur de la propriété id.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Id }
-     *     
+     *
+     * @return possible object is
+     * {@link Id }
      */
-    public Id getId() {
+    public Id getId()
+    {
         return id;
     }
 
     /**
      * Définit la valeur de la propriété id.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Id }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Id }
      */
-    public void setId(Id value) {
+    public void setId(Id value)
+    {
         this.id = value;
     }
 
     /**
      * Obtient la valeur de la propriété name.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
     /**
      * Définit la valeur de la propriété name.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setName(String value) {
+    public void setName(String value)
+    {
         this.name = value;
     }
 
     /**
      * Obtient la valeur de la propriété courseFamily.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getCourseFamily() {
+    public String getCourseFamily()
+    {
         return courseFamily;
     }
 
     /**
      * Définit la valeur de la propriété courseFamily.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setCourseFamily(String value) {
+    public void setCourseFamily(String value)
+    {
         this.courseFamily = value;
     }
 
     /**
      * Obtient la valeur de la propriété length.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getLength() {
+    public Double getLength()
+    {
         return length;
     }
 
     /**
      * Définit la valeur de la propriété length.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setLength(Double value) {
+    public void setLength(Double value)
+    {
         this.length = value;
     }
 
     /**
      * Obtient la valeur de la propriété climb.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getClimb() {
+    public Double getClimb()
+    {
         return climb;
     }
 
     /**
      * Définit la valeur de la propriété climb.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setClimb(Double value) {
+    public void setClimb(Double value)
+    {
         this.climb = value;
     }
 
     /**
      * Obtient la valeur de la propriété numberOfControls.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getNumberOfControls() {
+    public BigInteger getNumberOfControls()
+    {
         return numberOfControls;
     }
 
     /**
      * Définit la valeur de la propriété numberOfControls.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setNumberOfControls(BigInteger value) {
+    public void setNumberOfControls(BigInteger value)
+    {
         this.numberOfControls = value;
     }
 

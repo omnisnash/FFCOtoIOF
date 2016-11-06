@@ -8,25 +8,20 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         Element that connects a course with a class. Courses should be present in the RaceCourseData element and are matched on course name and/or course family. Classes are matched by 1) Id, 2) Name.
- *       
- * 
+ * Element that connects a course with a class. Courses should be present in the RaceCourseData element and are matched on course name and/or course family. Classes are matched by 1) Id, 2) Name.
+ * <p>
+ * <p>
  * <p>Classe Java pour ClassCourseAssignment complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ClassCourseAssignment">
  *   &lt;complexContent>
@@ -44,19 +39,18 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ClassCourseAssignment", propOrder = {
-    "classId",
-    "className",
-    "allowedOnLeg",
-    "courseName",
-    "courseFamily",
-    "extensions"
+        "classId",
+        "className",
+        "allowedOnLeg",
+        "courseName",
+        "courseFamily",
+        "extensions"
 })
-public class ClassCourseAssignment {
+public class ClassCourseAssignment
+{
 
     @XmlElement(name = "ClassId")
     protected Id classId;
@@ -75,76 +69,72 @@ public class ClassCourseAssignment {
 
     /**
      * Obtient la valeur de la propriété classId.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Id }
-     *     
+     *
+     * @return possible object is
+     * {@link Id }
      */
-    public Id getClassId() {
+    public Id getClassId()
+    {
         return classId;
     }
 
     /**
      * Définit la valeur de la propriété classId.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Id }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Id }
      */
-    public void setClassId(Id value) {
+    public void setClassId(Id value)
+    {
         this.classId = value;
     }
 
     /**
      * Obtient la valeur de la propriété className.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getClassName() {
+    public String getClassName()
+    {
         return className;
     }
 
     /**
      * Définit la valeur de la propriété className.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setClassName(String value) {
+    public void setClassName(String value)
+    {
         this.className = value;
     }
 
     /**
      * Gets the value of the allowedOnLeg property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the allowedOnLeg property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAllowedOnLeg().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BigInteger }
-     * 
-     * 
      */
-    public List<BigInteger> getAllowedOnLeg() {
-        if (allowedOnLeg == null) {
+    public List<BigInteger> getAllowedOnLeg()
+    {
+        if (allowedOnLeg == null)
+        {
             allowedOnLeg = new ArrayList<BigInteger>();
         }
         return this.allowedOnLeg;
@@ -152,97 +142,89 @@ public class ClassCourseAssignment {
 
     /**
      * Obtient la valeur de la propriété courseName.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getCourseName() {
+    public String getCourseName()
+    {
         return courseName;
     }
 
     /**
      * Définit la valeur de la propriété courseName.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setCourseName(String value) {
+    public void setCourseName(String value)
+    {
         this.courseName = value;
     }
 
     /**
      * Obtient la valeur de la propriété courseFamily.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getCourseFamily() {
+    public String getCourseFamily()
+    {
         return courseFamily;
     }
 
     /**
      * Définit la valeur de la propriété courseFamily.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setCourseFamily(String value) {
+    public void setCourseFamily(String value)
+    {
         this.courseFamily = value;
     }
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété numberOfCompetitors.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getNumberOfCompetitors() {
+    public BigInteger getNumberOfCompetitors()
+    {
         return numberOfCompetitors;
     }
 
     /**
      * Définit la valeur de la propriété numberOfCompetitors.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setNumberOfCompetitors(BigInteger value) {
+    public void setNumberOfCompetitors(BigInteger value)
+    {
         this.numberOfCompetitors = value;
     }
 

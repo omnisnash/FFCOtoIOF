@@ -15,14 +15,13 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         Defines the the selected answer, the correct answer and the time used on a Trail-O control.
- *       
- * 
+ * Defines the the selected answer, the correct answer and the time used on a Trail-O control.
+ * <p>
+ * <p>
  * <p>Classe Java pour ControlAnswer complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ControlAnswer">
  *   &lt;complexContent>
@@ -37,17 +36,16 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ControlAnswer", propOrder = {
-    "answer",
-    "correctAnswer",
-    "time",
-    "extensions"
+        "answer",
+        "correctAnswer",
+        "time",
+        "extensions"
 })
-public class ControlAnswer {
+public class ControlAnswer
+{
 
     @XmlElement(name = "Answer", required = true)
     protected String answer;
@@ -60,97 +58,89 @@ public class ControlAnswer {
 
     /**
      * Obtient la valeur de la propriété answer.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getAnswer() {
+    public String getAnswer()
+    {
         return answer;
     }
 
     /**
      * Définit la valeur de la propriété answer.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setAnswer(String value) {
+    public void setAnswer(String value)
+    {
         this.answer = value;
     }
 
     /**
      * Obtient la valeur de la propriété correctAnswer.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getCorrectAnswer() {
+    public String getCorrectAnswer()
+    {
         return correctAnswer;
     }
 
     /**
      * Définit la valeur de la propriété correctAnswer.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setCorrectAnswer(String value) {
+    public void setCorrectAnswer(String value)
+    {
         this.correctAnswer = value;
     }
 
     /**
      * Obtient la valeur de la propriété time.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getTime() {
+    public Double getTime()
+    {
         return time;
     }
 
     /**
      * Définit la valeur de la propriété time.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setTime(Double value) {
+    public void setTime(Double value)
+    {
         this.time = value;
     }
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 

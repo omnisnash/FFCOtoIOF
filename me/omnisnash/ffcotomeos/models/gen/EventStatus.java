@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java pour EventStatus.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * <p>
  * <pre>
@@ -30,83 +30,70 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "EventStatus")
 @XmlEnum
-public enum EventStatus {
+public enum EventStatus
+{
 
 
     /**
-     * 
-     *             The event or race is on a planning stadium and has not been submitted to any sanctioning body.
-     *           
-     * 
+     * The event or race is on a planning stadium and has not been submitted to any sanctioning body.
      */
     @XmlEnumValue("Planned")
     PLANNED("Planned"),
 
     /**
-     * 
-     *             The organiser has submitted the event to the relevant sanctioning body.
-     *           
-     * 
+     * The organiser has submitted the event to the relevant sanctioning body.
      */
     @XmlEnumValue("Applied")
     APPLIED("Applied"),
 
     /**
-     * 
-     *             The organiser has bid on hosting the event or race as e.g. a championship.
-     *           
-     * 
+     * The organiser has bid on hosting the event or race as e.g. a championship.
      */
     @XmlEnumValue("Proposed")
     PROPOSED("Proposed"),
 
     /**
-     * 
-     *             The event oc race meets the relevant requirements and will happen.
-     *           
-     * 
+     * The event oc race meets the relevant requirements and will happen.
      */
     @XmlEnumValue("Sanctioned")
     SANCTIONED("Sanctioned"),
 
     /**
-     * 
-     *             The event or race has been canceled, e.g. due to weather conditions.
-     *           
-     * 
+     * The event or race has been canceled, e.g. due to weather conditions.
      */
     @XmlEnumValue("Canceled")
     CANCELED("Canceled"),
 
     /**
-     * 
-     *             The date of the event or race has changed. A new Event or Race element should be created in addition to the already existing element.
-     *           
-     * 
+     * The date of the event or race has changed. A new Event or Race element should be created in addition to the already existing element.
      */
     @XmlEnumValue("Rescheduled")
     RESCHEDULED("Rescheduled");
     private final String value;
 
-    EventStatus(String v) {
+    EventStatus(String v)
+    {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
-    public static EventStatus fromValue(String v) {
-        for (EventStatus c: EventStatus.values()) {
-            if (c.value.equals(v)) {
+    public static EventStatus fromValue(String v)
+    {
+        for (EventStatus c : EventStatus.values())
+        {
+            if (c.value.equals(v))
+            {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value()
+    {
+        return value;
     }
 
 }

@@ -17,14 +17,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         Defines a position in a map's coordinate system.
- *       
- * 
+ * Defines a position in a map's coordinate system.
+ * <p>
+ * <p>
  * <p>Classe Java pour MapPosition complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="MapPosition">
  *   &lt;complexContent>
@@ -43,12 +42,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MapPosition")
-public class MapPosition {
+public class MapPosition
+{
 
     @XmlAttribute(name = "x", required = true)
     protected double x;
@@ -60,61 +58,61 @@ public class MapPosition {
 
     /**
      * Obtient la valeur de la propriété x.
-     * 
      */
-    public double getX() {
+    public double getX()
+    {
         return x;
     }
 
     /**
      * Définit la valeur de la propriété x.
-     * 
      */
-    public void setX(double value) {
+    public void setX(double value)
+    {
         this.x = value;
     }
 
     /**
      * Obtient la valeur de la propriété y.
-     * 
      */
-    public double getY() {
+    public double getY()
+    {
         return y;
     }
 
     /**
      * Définit la valeur de la propriété y.
-     * 
      */
-    public void setY(double value) {
+    public void setY(double value)
+    {
         this.y = value;
     }
 
     /**
      * Obtient la valeur de la propriété unit.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getUnit() {
-        if (unit == null) {
+    public String getUnit()
+    {
+        if (unit == null)
+        {
             return "mm";
-        } else {
+        } else
+        {
             return unit;
         }
     }
 
     /**
      * Définit la valeur de la propriété unit.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setUnit(String value) {
+    public void setUnit(String value)
+    {
         this.unit = value;
     }
 

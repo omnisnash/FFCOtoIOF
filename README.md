@@ -9,6 +9,8 @@ Two XML files are generated :
 
 They respond to the IOF-XML normalisation (http://www.orienteering.org/datastandard/IOF.xsd)
 
-
 Source : https://gitlab.com/omnisnash/FFCOtoMeos
+
+OE2003 / 10
+Mandatory Header
 

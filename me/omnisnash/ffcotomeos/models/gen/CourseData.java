@@ -8,20 +8,16 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Classe Java pour anonymous complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -35,18 +31,16 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "event",
-    "raceCourseData",
-    "extensions"
+        "event",
+        "raceCourseData",
+        "extensions"
 })
 @XmlRootElement(name = "CourseData")
 public class CourseData
-    extends BaseMessageElement
+        extends BaseMessageElement
 {
 
     @XmlElement(name = "Event", required = true)
@@ -58,52 +52,50 @@ public class CourseData
 
     /**
      * Obtient la valeur de la propriété event.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Event }
-     *     
+     *
+     * @return possible object is
+     * {@link Event }
      */
-    public Event getEvent() {
+    public Event getEvent()
+    {
         return event;
     }
 
     /**
      * Définit la valeur de la propriété event.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Event }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Event }
      */
-    public void setEvent(Event value) {
+    public void setEvent(Event value)
+    {
         this.event = value;
     }
 
     /**
      * Gets the value of the raceCourseData property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the raceCourseData property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRaceCourseData().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RaceCourseData }
-     * 
-     * 
      */
-    public List<RaceCourseData> getRaceCourseData() {
-        if (raceCourseData == null) {
+    public List<RaceCourseData> getRaceCourseData()
+    {
+        if (raceCourseData == null)
+        {
             raceCourseData = new ArrayList<RaceCourseData>();
         }
         return this.raceCourseData;
@@ -111,25 +103,23 @@ public class CourseData
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 

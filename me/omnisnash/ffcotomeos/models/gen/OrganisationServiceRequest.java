@@ -8,23 +8,22 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
- * 
- *         Service requests made by an organisation.
- *       
- * 
+ * Service requests made by an organisation.
+ * <p>
+ * <p>
  * <p>Classe Java pour OrganisationServiceRequest complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="OrganisationServiceRequest">
  *   &lt;complexContent>
@@ -38,16 +37,15 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OrganisationServiceRequest", propOrder = {
-    "organisation",
-    "serviceRequest",
-    "personServiceRequest"
+        "organisation",
+        "serviceRequest",
+        "personServiceRequest"
 })
-public class OrganisationServiceRequest {
+public class OrganisationServiceRequest
+{
 
     @XmlElement(name = "Organisation", required = true)
     protected Organisation organisation;
@@ -58,52 +56,50 @@ public class OrganisationServiceRequest {
 
     /**
      * Obtient la valeur de la propriété organisation.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Organisation }
-     *     
+     *
+     * @return possible object is
+     * {@link Organisation }
      */
-    public Organisation getOrganisation() {
+    public Organisation getOrganisation()
+    {
         return organisation;
     }
 
     /**
      * Définit la valeur de la propriété organisation.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Organisation }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Organisation }
      */
-    public void setOrganisation(Organisation value) {
+    public void setOrganisation(Organisation value)
+    {
         this.organisation = value;
     }
 
     /**
      * Gets the value of the serviceRequest property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the serviceRequest property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getServiceRequest().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ServiceRequest }
-     * 
-     * 
      */
-    public List<ServiceRequest> getServiceRequest() {
-        if (serviceRequest == null) {
+    public List<ServiceRequest> getServiceRequest()
+    {
+        if (serviceRequest == null)
+        {
             serviceRequest = new ArrayList<ServiceRequest>();
         }
         return this.serviceRequest;
@@ -111,28 +107,28 @@ public class OrganisationServiceRequest {
 
     /**
      * Gets the value of the personServiceRequest property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the personServiceRequest property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPersonServiceRequest().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PersonServiceRequest }
-     * 
-     * 
      */
-    public List<PersonServiceRequest> getPersonServiceRequest() {
-        if (personServiceRequest == null) {
+    public List<PersonServiceRequest> getPersonServiceRequest()
+    {
+        if (personServiceRequest == null)
+        {
             personServiceRequest = new ArrayList<PersonServiceRequest>();
         }
         return this.personServiceRequest;

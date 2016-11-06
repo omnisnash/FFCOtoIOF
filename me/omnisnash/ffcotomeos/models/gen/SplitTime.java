@@ -8,24 +8,19 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         Defines a split time at a control.
- *       
- * 
+ * Defines a split time at a control.
+ * <p>
+ * <p>
  * <p>Classe Java pour SplitTime complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="SplitTime">
  *   &lt;complexContent>
@@ -48,16 +43,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SplitTime", propOrder = {
-    "controlCode",
-    "time",
-    "extensions"
+        "controlCode",
+        "time",
+        "extensions"
 })
-public class SplitTime {
+public class SplitTime
+{
 
     @XmlElement(name = "ControlCode", required = true)
     protected String controlCode;
@@ -71,101 +65,95 @@ public class SplitTime {
 
     /**
      * Obtient la valeur de la propriété controlCode.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getControlCode() {
+    public String getControlCode()
+    {
         return controlCode;
     }
 
     /**
      * Définit la valeur de la propriété controlCode.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setControlCode(String value) {
+    public void setControlCode(String value)
+    {
         this.controlCode = value;
     }
 
     /**
      * Obtient la valeur de la propriété time.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getTime() {
+    public Double getTime()
+    {
         return time;
     }
 
     /**
      * Définit la valeur de la propriété time.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setTime(Double value) {
+    public void setTime(Double value)
+    {
         this.time = value;
     }
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété status.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getStatus() {
-        if (status == null) {
+    public String getStatus()
+    {
+        if (status == null)
+        {
             return "OK";
-        } else {
+        } else
+        {
             return status;
         }
     }
 
     /**
      * Définit la valeur de la propriété status.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setStatus(String value) {
+    public void setStatus(String value)
+    {
         this.status = value;
     }
 

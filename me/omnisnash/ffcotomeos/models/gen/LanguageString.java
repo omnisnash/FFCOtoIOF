@@ -8,22 +8,17 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 
 
 /**
- * 
- *         Defines a text that is given in a particular language.
- *       
- * 
+ * Defines a text that is given in a particular language.
+ * <p>
+ * <p>
  * <p>Classe Java pour LanguageString complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="LanguageString">
  *   &lt;simpleContent>
@@ -33,14 +28,13 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "LanguageString", propOrder = {
-    "value"
+        "value"
 })
-public class LanguageString {
+public class LanguageString
+{
 
     @XmlValue
     protected String value;
@@ -49,49 +43,45 @@ public class LanguageString {
 
     /**
      * Obtient la valeur de la propriété value.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getValue() {
+    public String getValue()
+    {
         return value;
     }
 
     /**
      * Définit la valeur de la propriété value.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setValue(String value) {
+    public void setValue(String value)
+    {
         this.value = value;
     }
 
     /**
      * Obtient la valeur de la propriété language.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getLanguage() {
+    public String getLanguage()
+    {
         return language;
     }
 
     /**
      * Définit la valeur de la propriété language.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setLanguage(String value) {
+    public void setLanguage(String value)
+    {
         this.language = value;
     }
 

@@ -15,14 +15,13 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         Map information, used in course setting software with regard to the "real" map.
- *       
- * 
+ * Map information, used in course setting software with regard to the "real" map.
+ * <p>
+ * <p>
  * <p>Classe Java pour Map complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Map">
  *   &lt;complexContent>
@@ -39,19 +38,18 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Map", propOrder = {
-    "id",
-    "image",
-    "scale",
-    "mapPositionTopLeft",
-    "mapPositionBottomRight",
-    "extensions"
+        "id",
+        "image",
+        "scale",
+        "mapPositionTopLeft",
+        "mapPositionBottomRight",
+        "extensions"
 })
-public class Map {
+public class Map
+{
 
     @XmlElement(name = "Id")
     protected Id id;
@@ -68,137 +66,127 @@ public class Map {
 
     /**
      * Obtient la valeur de la propriété id.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Id }
-     *     
+     *
+     * @return possible object is
+     * {@link Id }
      */
-    public Id getId() {
+    public Id getId()
+    {
         return id;
     }
 
     /**
      * Définit la valeur de la propriété id.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Id }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Id }
      */
-    public void setId(Id value) {
+    public void setId(Id value)
+    {
         this.id = value;
     }
 
     /**
      * Obtient la valeur de la propriété image.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Image }
-     *     
+     *
+     * @return possible object is
+     * {@link Image }
      */
-    public Image getImage() {
+    public Image getImage()
+    {
         return image;
     }
 
     /**
      * Définit la valeur de la propriété image.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Image }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Image }
      */
-    public void setImage(Image value) {
+    public void setImage(Image value)
+    {
         this.image = value;
     }
 
     /**
      * Obtient la valeur de la propriété scale.
-     * 
      */
-    public double getScale() {
+    public double getScale()
+    {
         return scale;
     }
 
     /**
      * Définit la valeur de la propriété scale.
-     * 
      */
-    public void setScale(double value) {
+    public void setScale(double value)
+    {
         this.scale = value;
     }
 
     /**
      * Obtient la valeur de la propriété mapPositionTopLeft.
-     * 
-     * @return
-     *     possible object is
-     *     {@link MapPosition }
-     *     
+     *
+     * @return possible object is
+     * {@link MapPosition }
      */
-    public MapPosition getMapPositionTopLeft() {
+    public MapPosition getMapPositionTopLeft()
+    {
         return mapPositionTopLeft;
     }
 
     /**
      * Définit la valeur de la propriété mapPositionTopLeft.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link MapPosition }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link MapPosition }
      */
-    public void setMapPositionTopLeft(MapPosition value) {
+    public void setMapPositionTopLeft(MapPosition value)
+    {
         this.mapPositionTopLeft = value;
     }
 
     /**
      * Obtient la valeur de la propriété mapPositionBottomRight.
-     * 
-     * @return
-     *     possible object is
-     *     {@link MapPosition }
-     *     
+     *
+     * @return possible object is
+     * {@link MapPosition }
      */
-    public MapPosition getMapPositionBottomRight() {
+    public MapPosition getMapPositionBottomRight()
+    {
         return mapPositionBottomRight;
     }
 
     /**
      * Définit la valeur de la propriété mapPositionBottomRight.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link MapPosition }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link MapPosition }
      */
-    public void setMapPositionBottomRight(MapPosition value) {
+    public void setMapPositionBottomRight(MapPosition value)
+    {
         this.mapPositionBottomRight = value;
     }
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 

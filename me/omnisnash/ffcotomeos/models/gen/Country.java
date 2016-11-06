@@ -8,22 +8,17 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 
 
 /**
- * 
- *         Defines the name of the country.
- *       
- * 
+ * Defines the name of the country.
+ * <p>
+ * <p>
  * <p>Classe Java pour Country complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Country">
  *   &lt;simpleContent>
@@ -33,14 +28,13 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Country", propOrder = {
-    "value"
+        "value"
 })
-public class Country {
+public class Country
+{
 
     @XmlValue
     protected String value;
@@ -49,49 +43,45 @@ public class Country {
 
     /**
      * Obtient la valeur de la propriété value.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getValue() {
+    public String getValue()
+    {
         return value;
     }
 
     /**
      * Définit la valeur de la propriété value.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setValue(String value) {
+    public void setValue(String value)
+    {
         this.value = value;
     }
 
     /**
      * Obtient la valeur de la propriété code.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getCode() {
+    public String getCode()
+    {
         return code;
     }
 
     /**
      * Définit la valeur de la propriété code.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setCode(String value) {
+    public void setCode(String value)
+    {
         this.code = value;
     }
 

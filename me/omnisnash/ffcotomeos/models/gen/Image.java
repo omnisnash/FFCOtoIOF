@@ -8,23 +8,18 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 
 
 /**
- * 
- *           Defines an image file, either as a link (use the url attribute) or as base64-encoded binary data.
- *         
- * 
+ * Defines an image file, either as a link (use the url attribute) or as base64-encoded binary data.
+ * <p>
+ * <p>
  * <p>Classe Java pour Image complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Image">
  *   &lt;simpleContent>
@@ -38,14 +33,13 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Image", propOrder = {
-    "value"
+        "value"
 })
-public class Image {
+public class Image
+{
 
     @XmlValue
     protected byte[] value;
@@ -62,143 +56,133 @@ public class Image {
 
     /**
      * Obtient la valeur de la propriété value.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
+     *
+     * @return possible object is
+     * byte[]
      */
-    public byte[] getValue() {
+    public byte[] getValue()
+    {
         return value;
     }
 
     /**
      * Définit la valeur de la propriété value.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
+     *
+     * @param value allowed object is
+     *              byte[]
      */
-    public void setValue(byte[] value) {
+    public void setValue(byte[] value)
+    {
         this.value = value;
     }
 
     /**
      * Obtient la valeur de la propriété url.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getUrl() {
+    public String getUrl()
+    {
         return url;
     }
 
     /**
      * Définit la valeur de la propriété url.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setUrl(String value) {
+    public void setUrl(String value)
+    {
         this.url = value;
     }
 
     /**
      * Obtient la valeur de la propriété mediaType.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getMediaType() {
+    public String getMediaType()
+    {
         return mediaType;
     }
 
     /**
      * Définit la valeur de la propriété mediaType.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setMediaType(String value) {
+    public void setMediaType(String value)
+    {
         this.mediaType = value;
     }
 
     /**
      * Obtient la valeur de la propriété width.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getWidth() {
+    public BigInteger getWidth()
+    {
         return width;
     }
 
     /**
      * Définit la valeur de la propriété width.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setWidth(BigInteger value) {
+    public void setWidth(BigInteger value)
+    {
         this.width = value;
     }
 
     /**
      * Obtient la valeur de la propriété height.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getHeight() {
+    public BigInteger getHeight()
+    {
         return height;
     }
 
     /**
      * Définit la valeur de la propriété height.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setHeight(BigInteger value) {
+    public void setHeight(BigInteger value)
+    {
         this.height = value;
     }
 
     /**
      * Obtient la valeur de la propriété resolution.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getResolution() {
+    public Double getResolution()
+    {
         return resolution;
     }
 
     /**
      * Définit la valeur de la propriété resolution.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setResolution(Double value) {
+    public void setResolution(Double value)
+    {
         this.resolution = value;
     }
 

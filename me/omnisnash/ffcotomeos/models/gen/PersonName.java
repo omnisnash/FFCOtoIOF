@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java pour PersonName complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PersonName">
  *   &lt;complexContent>
@@ -31,15 +31,14 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PersonName", propOrder = {
-    "family",
-    "given"
+        "family",
+        "given"
 })
-public class PersonName {
+public class PersonName
+{
 
     @XmlElement(name = "Family", required = true)
     protected String family;
@@ -48,49 +47,45 @@ public class PersonName {
 
     /**
      * Obtient la valeur de la propriété family.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getFamily() {
+    public String getFamily()
+    {
         return family;
     }
 
     /**
      * Définit la valeur de la propriété family.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setFamily(String value) {
+    public void setFamily(String value)
+    {
         this.family = value;
     }
 
     /**
      * Obtient la valeur de la propriété given.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getGiven() {
+    public String getGiven()
+    {
         return given;
     }
 
     /**
      * Définit la valeur de la propriété given.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setGiven(String value) {
+    public void setGiven(String value)
+    {
         this.given = value;
     }
 

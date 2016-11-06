@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java pour EventClassification.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * <p>
  * <pre>
@@ -29,11 +29,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "EventClassification")
 @XmlEnum
-public enum EventClassification {
+public enum EventClassification
+{
 
     @XmlEnumValue("International")
     INTERNATIONAL("International"),
@@ -47,21 +47,26 @@ public enum EventClassification {
     CLUB("Club");
     private final String value;
 
-    EventClassification(String v) {
+    EventClassification(String v)
+    {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
-    public static EventClassification fromValue(String v) {
-        for (EventClassification c: EventClassification.values()) {
-            if (c.value.equals(v)) {
+    public static EventClassification fromValue(String v)
+    {
+        for (EventClassification c : EventClassification.values())
+        {
+            if (c.value.equals(v))
+            {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value()
+    {
+        return value;
     }
 
 }

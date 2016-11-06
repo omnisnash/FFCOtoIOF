@@ -8,24 +8,19 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         Used to state start time allocation requests. It consists of a possible reference Organisation or Person and the allocation request, e.g. late start or grouped with the reference Organisation/Person. This way it is possible to state requests to the event organizer so that e.g. all members of an organisation has start times close to each other - or parents have start times far from each other. It is totally up to the event software and organizers whether they will support such requests.
- *       
- * 
+ * Used to state start time allocation requests. It consists of a possible reference Organisation or Person and the allocation request, e.g. late start or grouped with the reference Organisation/Person. This way it is possible to state requests to the event organizer so that e.g. all members of an organisation has start times close to each other - or parents have start times far from each other. It is totally up to the event software and organizers whether they will support such requests.
+ * <p>
+ * <p>
  * <p>Classe Java pour StartTimeAllocationRequest complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="StartTimeAllocationRequest">
  *   &lt;complexContent>
@@ -49,15 +44,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "StartTimeAllocationRequest", propOrder = {
-    "organisation",
-    "person"
+        "organisation",
+        "person"
 })
-public class StartTimeAllocationRequest {
+public class StartTimeAllocationRequest
+{
 
     @XmlElement(name = "Organisation")
     protected Organisation organisation;
@@ -69,77 +63,73 @@ public class StartTimeAllocationRequest {
 
     /**
      * Obtient la valeur de la propriété organisation.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Organisation }
-     *     
+     *
+     * @return possible object is
+     * {@link Organisation }
      */
-    public Organisation getOrganisation() {
+    public Organisation getOrganisation()
+    {
         return organisation;
     }
 
     /**
      * Définit la valeur de la propriété organisation.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Organisation }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Organisation }
      */
-    public void setOrganisation(Organisation value) {
+    public void setOrganisation(Organisation value)
+    {
         this.organisation = value;
     }
 
     /**
      * Obtient la valeur de la propriété person.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Person }
-     *     
+     *
+     * @return possible object is
+     * {@link Person }
      */
-    public Person getPerson() {
+    public Person getPerson()
+    {
         return person;
     }
 
     /**
      * Définit la valeur de la propriété person.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Person }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Person }
      */
-    public void setPerson(Person value) {
+    public void setPerson(Person value)
+    {
         this.person = value;
     }
 
     /**
      * Obtient la valeur de la propriété type.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getType() {
-        if (type == null) {
+    public String getType()
+    {
+        if (type == null)
+        {
             return "Normal";
-        } else {
+        } else
+        {
             return type;
         }
     }
 
     /**
      * Définit la valeur de la propriété type.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setType(String value) {
+    public void setType(String value)
+    {
         this.type = value;
     }
 

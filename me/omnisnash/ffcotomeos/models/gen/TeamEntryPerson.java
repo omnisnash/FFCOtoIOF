@@ -8,24 +8,23 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
- * 
- *         Defines a person that is part of a team entry.
- *       
- * 
+ * Defines a person that is part of a team entry.
+ * <p>
+ * <p>
  * <p>Classe Java pour TeamEntryPerson complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="TeamEntryPerson">
  *   &lt;complexContent>
@@ -44,21 +43,20 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TeamEntryPerson", propOrder = {
-    "person",
-    "organisation",
-    "leg",
-    "legOrder",
-    "controlCard",
-    "score",
-    "assignedFee",
-    "extensions"
+        "person",
+        "organisation",
+        "leg",
+        "legOrder",
+        "controlCard",
+        "score",
+        "assignedFee",
+        "extensions"
 })
-public class TeamEntryPerson {
+public class TeamEntryPerson
+{
 
     @XmlElement(name = "Person")
     protected Person person;
@@ -79,124 +77,116 @@ public class TeamEntryPerson {
 
     /**
      * Obtient la valeur de la propriété person.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Person }
-     *     
+     *
+     * @return possible object is
+     * {@link Person }
      */
-    public Person getPerson() {
+    public Person getPerson()
+    {
         return person;
     }
 
     /**
      * Définit la valeur de la propriété person.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Person }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Person }
      */
-    public void setPerson(Person value) {
+    public void setPerson(Person value)
+    {
         this.person = value;
     }
 
     /**
      * Obtient la valeur de la propriété organisation.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Organisation }
-     *     
+     *
+     * @return possible object is
+     * {@link Organisation }
      */
-    public Organisation getOrganisation() {
+    public Organisation getOrganisation()
+    {
         return organisation;
     }
 
     /**
      * Définit la valeur de la propriété organisation.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Organisation }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Organisation }
      */
-    public void setOrganisation(Organisation value) {
+    public void setOrganisation(Organisation value)
+    {
         this.organisation = value;
     }
 
     /**
      * Obtient la valeur de la propriété leg.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getLeg() {
+    public BigInteger getLeg()
+    {
         return leg;
     }
 
     /**
      * Définit la valeur de la propriété leg.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setLeg(BigInteger value) {
+    public void setLeg(BigInteger value)
+    {
         this.leg = value;
     }
 
     /**
      * Obtient la valeur de la propriété legOrder.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getLegOrder() {
+    public BigInteger getLegOrder()
+    {
         return legOrder;
     }
 
     /**
      * Définit la valeur de la propriété legOrder.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setLegOrder(BigInteger value) {
+    public void setLegOrder(BigInteger value)
+    {
         this.legOrder = value;
     }
 
     /**
      * Gets the value of the controlCard property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the controlCard property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getControlCard().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ControlCard }
-     * 
-     * 
      */
-    public List<ControlCard> getControlCard() {
-        if (controlCard == null) {
+    public List<ControlCard> getControlCard()
+    {
+        if (controlCard == null)
+        {
             controlCard = new ArrayList<ControlCard>();
         }
         return this.controlCard;
@@ -204,28 +194,28 @@ public class TeamEntryPerson {
 
     /**
      * Gets the value of the score property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the score property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getScore().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Score }
-     * 
-     * 
      */
-    public List<Score> getScore() {
-        if (score == null) {
+    public List<Score> getScore()
+    {
+        if (score == null)
+        {
             score = new ArrayList<Score>();
         }
         return this.score;
@@ -233,28 +223,28 @@ public class TeamEntryPerson {
 
     /**
      * Gets the value of the assignedFee property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the assignedFee property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAssignedFee().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AssignedFee }
-     * 
-     * 
      */
-    public List<AssignedFee> getAssignedFee() {
-        if (assignedFee == null) {
+    public List<AssignedFee> getAssignedFee()
+    {
+        if (assignedFee == null)
+        {
             assignedFee = new ArrayList<AssignedFee>();
         }
         return this.assignedFee;
@@ -262,25 +252,23 @@ public class TeamEntryPerson {
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 

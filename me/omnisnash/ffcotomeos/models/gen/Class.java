@@ -8,29 +8,23 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
- * 
- *         Defines a class in an event.
- *       
- * 
+ * Defines a class in an event.
+ * <p>
+ * <p>
  * <p>Classe Java pour Class complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Class">
  *   &lt;complexContent>
@@ -80,25 +74,24 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Class", propOrder = {
-    "id",
-    "name",
-    "shortName",
-    "classType",
-    "leg",
-    "teamFee",
-    "fee",
-    "status",
-    "raceClass",
-    "tooFewEntriesSubstituteClass",
-    "tooManyEntriesSubstituteClass",
-    "extensions"
+        "id",
+        "name",
+        "shortName",
+        "classType",
+        "leg",
+        "teamFee",
+        "fee",
+        "status",
+        "raceClass",
+        "tooFewEntriesSubstituteClass",
+        "tooManyEntriesSubstituteClass",
+        "extensions"
 })
-public class Class {
+public class Class
+{
 
     @XmlElement(name = "Id")
     protected Id id;
@@ -153,100 +146,94 @@ public class Class {
 
     /**
      * Obtient la valeur de la propriété id.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Id }
-     *     
+     *
+     * @return possible object is
+     * {@link Id }
      */
-    public Id getId() {
+    public Id getId()
+    {
         return id;
     }
 
     /**
      * Définit la valeur de la propriété id.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Id }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Id }
      */
-    public void setId(Id value) {
+    public void setId(Id value)
+    {
         this.id = value;
     }
 
     /**
      * Obtient la valeur de la propriété name.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
     /**
      * Définit la valeur de la propriété name.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setName(String value) {
+    public void setName(String value)
+    {
         this.name = value;
     }
 
     /**
      * Obtient la valeur de la propriété shortName.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getShortName() {
+    public String getShortName()
+    {
         return shortName;
     }
 
     /**
      * Définit la valeur de la propriété shortName.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setShortName(String value) {
+    public void setShortName(String value)
+    {
         this.shortName = value;
     }
 
     /**
      * Gets the value of the classType property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the classType property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getClassType().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ClassType }
-     * 
-     * 
      */
-    public List<ClassType> getClassType() {
-        if (classType == null) {
+    public List<ClassType> getClassType()
+    {
+        if (classType == null)
+        {
             classType = new ArrayList<ClassType>();
         }
         return this.classType;
@@ -254,28 +241,28 @@ public class Class {
 
     /**
      * Gets the value of the leg property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the leg property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getLeg().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Leg }
-     * 
-     * 
      */
-    public List<Leg> getLeg() {
-        if (leg == null) {
+    public List<Leg> getLeg()
+    {
+        if (leg == null)
+        {
             leg = new ArrayList<Leg>();
         }
         return this.leg;
@@ -283,28 +270,28 @@ public class Class {
 
     /**
      * Gets the value of the teamFee property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the teamFee property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTeamFee().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Fee }
-     * 
-     * 
      */
-    public List<Fee> getTeamFee() {
-        if (teamFee == null) {
+    public List<Fee> getTeamFee()
+    {
+        if (teamFee == null)
+        {
             teamFee = new ArrayList<Fee>();
         }
         return this.teamFee;
@@ -312,28 +299,28 @@ public class Class {
 
     /**
      * Gets the value of the fee property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the fee property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFee().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Fee }
-     * 
-     * 
      */
-    public List<Fee> getFee() {
-        if (fee == null) {
+    public List<Fee> getFee()
+    {
+        if (fee == null)
+        {
             fee = new ArrayList<Fee>();
         }
         return this.fee;
@@ -341,52 +328,50 @@ public class Class {
 
     /**
      * Obtient la valeur de la propriété status.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EventClassStatus }
-     *     
+     *
+     * @return possible object is
+     * {@link EventClassStatus }
      */
-    public EventClassStatus getStatus() {
+    public EventClassStatus getStatus()
+    {
         return status;
     }
 
     /**
      * Définit la valeur de la propriété status.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EventClassStatus }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EventClassStatus }
      */
-    public void setStatus(EventClassStatus value) {
+    public void setStatus(EventClassStatus value)
+    {
         this.status = value;
     }
 
     /**
      * Gets the value of the raceClass property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the raceClass property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRaceClass().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RaceClass }
-     * 
-     * 
      */
-    public List<RaceClass> getRaceClass() {
-        if (raceClass == null) {
+    public List<RaceClass> getRaceClass()
+    {
+        if (raceClass == null)
+        {
             raceClass = new ArrayList<RaceClass>();
         }
         return this.raceClass;
@@ -394,353 +379,333 @@ public class Class {
 
     /**
      * Obtient la valeur de la propriété tooFewEntriesSubstituteClass.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Class }
-     *     
+     *
+     * @return possible object is
+     * {@link Class }
      */
-    public Class getTooFewEntriesSubstituteClass() {
+    public Class getTooFewEntriesSubstituteClass()
+    {
         return tooFewEntriesSubstituteClass;
     }
 
     /**
      * Définit la valeur de la propriété tooFewEntriesSubstituteClass.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Class }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Class }
      */
-    public void setTooFewEntriesSubstituteClass(Class value) {
+    public void setTooFewEntriesSubstituteClass(Class value)
+    {
         this.tooFewEntriesSubstituteClass = value;
     }
 
     /**
      * Obtient la valeur de la propriété tooManyEntriesSubstituteClass.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Class }
-     *     
+     *
+     * @return possible object is
+     * {@link Class }
      */
-    public Class getTooManyEntriesSubstituteClass() {
+    public Class getTooManyEntriesSubstituteClass()
+    {
         return tooManyEntriesSubstituteClass;
     }
 
     /**
      * Définit la valeur de la propriété tooManyEntriesSubstituteClass.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Class }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Class }
      */
-    public void setTooManyEntriesSubstituteClass(Class value) {
+    public void setTooManyEntriesSubstituteClass(Class value)
+    {
         this.tooManyEntriesSubstituteClass = value;
     }
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété minAge.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getMinAge() {
+    public BigInteger getMinAge()
+    {
         return minAge;
     }
 
     /**
      * Définit la valeur de la propriété minAge.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setMinAge(BigInteger value) {
+    public void setMinAge(BigInteger value)
+    {
         this.minAge = value;
     }
 
     /**
      * Obtient la valeur de la propriété maxAge.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getMaxAge() {
+    public BigInteger getMaxAge()
+    {
         return maxAge;
     }
 
     /**
      * Définit la valeur de la propriété maxAge.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setMaxAge(BigInteger value) {
+    public void setMaxAge(BigInteger value)
+    {
         this.maxAge = value;
     }
 
     /**
      * Obtient la valeur de la propriété sex.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getSex() {
-        if (sex == null) {
+    public String getSex()
+    {
+        if (sex == null)
+        {
             return "B";
-        } else {
+        } else
+        {
             return sex;
         }
     }
 
     /**
      * Définit la valeur de la propriété sex.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setSex(String value) {
+    public void setSex(String value)
+    {
         this.sex = value;
     }
 
     /**
      * Obtient la valeur de la propriété minNumberOfTeamMembers.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getMinNumberOfTeamMembers() {
-        if (minNumberOfTeamMembers == null) {
+    public BigInteger getMinNumberOfTeamMembers()
+    {
+        if (minNumberOfTeamMembers == null)
+        {
             return new BigInteger("1");
-        } else {
+        } else
+        {
             return minNumberOfTeamMembers;
         }
     }
 
     /**
      * Définit la valeur de la propriété minNumberOfTeamMembers.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setMinNumberOfTeamMembers(BigInteger value) {
+    public void setMinNumberOfTeamMembers(BigInteger value)
+    {
         this.minNumberOfTeamMembers = value;
     }
 
     /**
      * Obtient la valeur de la propriété maxNumberOfTeamMembers.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getMaxNumberOfTeamMembers() {
-        if (maxNumberOfTeamMembers == null) {
+    public BigInteger getMaxNumberOfTeamMembers()
+    {
+        if (maxNumberOfTeamMembers == null)
+        {
             return new BigInteger("1");
-        } else {
+        } else
+        {
             return maxNumberOfTeamMembers;
         }
     }
 
     /**
      * Définit la valeur de la propriété maxNumberOfTeamMembers.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setMaxNumberOfTeamMembers(BigInteger value) {
+    public void setMaxNumberOfTeamMembers(BigInteger value)
+    {
         this.maxNumberOfTeamMembers = value;
     }
 
     /**
      * Obtient la valeur de la propriété minTeamAge.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getMinTeamAge() {
+    public BigInteger getMinTeamAge()
+    {
         return minTeamAge;
     }
 
     /**
      * Définit la valeur de la propriété minTeamAge.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setMinTeamAge(BigInteger value) {
+    public void setMinTeamAge(BigInteger value)
+    {
         this.minTeamAge = value;
     }
 
     /**
      * Obtient la valeur de la propriété maxTeamAge.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getMaxTeamAge() {
+    public BigInteger getMaxTeamAge()
+    {
         return maxTeamAge;
     }
 
     /**
      * Définit la valeur de la propriété maxTeamAge.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setMaxTeamAge(BigInteger value) {
+    public void setMaxTeamAge(BigInteger value)
+    {
         this.maxTeamAge = value;
     }
 
     /**
      * Obtient la valeur de la propriété numberOfCompetitors.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getNumberOfCompetitors() {
+    public BigInteger getNumberOfCompetitors()
+    {
         return numberOfCompetitors;
     }
 
     /**
      * Définit la valeur de la propriété numberOfCompetitors.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setNumberOfCompetitors(BigInteger value) {
+    public void setNumberOfCompetitors(BigInteger value)
+    {
         this.numberOfCompetitors = value;
     }
 
     /**
      * Obtient la valeur de la propriété maxNumberOfCompetitors.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getMaxNumberOfCompetitors() {
+    public BigInteger getMaxNumberOfCompetitors()
+    {
         return maxNumberOfCompetitors;
     }
 
     /**
      * Définit la valeur de la propriété maxNumberOfCompetitors.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setMaxNumberOfCompetitors(BigInteger value) {
+    public void setMaxNumberOfCompetitors(BigInteger value)
+    {
         this.maxNumberOfCompetitors = value;
     }
 
     /**
      * Obtient la valeur de la propriété resultListMode.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getResultListMode() {
-        if (resultListMode == null) {
+    public String getResultListMode()
+    {
+        if (resultListMode == null)
+        {
             return "Default";
-        } else {
+        } else
+        {
             return resultListMode;
         }
     }
 
     /**
      * Définit la valeur de la propriété resultListMode.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setResultListMode(String value) {
+    public void setResultListMode(String value)
+    {
         this.resultListMode = value;
     }
 
     /**
      * Obtient la valeur de la propriété modifyTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getModifyTime() {
+    public XMLGregorianCalendar getModifyTime()
+    {
         return modifyTime;
     }
 
     /**
      * Définit la valeur de la propriété modifyTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setModifyTime(XMLGregorianCalendar value) {
+    public void setModifyTime(XMLGregorianCalendar value)
+    {
         this.modifyTime = value;
     }
 

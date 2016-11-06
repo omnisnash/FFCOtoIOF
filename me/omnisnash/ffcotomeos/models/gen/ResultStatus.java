@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java pour ResultStatus.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * <p>
  * <pre>
@@ -39,163 +39,123 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "ResultStatus")
 @XmlEnum
-public enum ResultStatus {
+public enum ResultStatus
+{
 
 
     /**
-     * 
-     *             Finished and validated.
-     *           
-     * 
+     * Finished and validated.
      */
     OK("OK"),
 
     /**
-     * 
-     *             Finished but not yet validated.
-     *           
-     * 
+     * Finished but not yet validated.
      */
     @XmlEnumValue("Finished")
     FINISHED("Finished"),
 
     /**
-     * 
-     *             Missing punch.
-     *           
-     * 
+     * Missing punch.
      */
     @XmlEnumValue("MissingPunch")
     MISSING_PUNCH("MissingPunch"),
 
     /**
-     * 
-     *             Disqualified (for some other reason than a missing punch).
-     *           
-     * 
+     * Disqualified (for some other reason than a missing punch).
      */
     @XmlEnumValue("Disqualified")
     DISQUALIFIED("Disqualified"),
 
     /**
-     * 
-     *             Did not finish (i.e. conciously cancelling the race after having started, in contrast to MissingPunch).
-     *           
-     * 
+     * Did not finish (i.e. conciously cancelling the race after having started, in contrast to MissingPunch).
      */
     @XmlEnumValue("DidNotFinish")
     DID_NOT_FINISH("DidNotFinish"),
 
     /**
-     * 
-     *             Currently on course.
-     *           
-     * 
+     * Currently on course.
      */
     @XmlEnumValue("Active")
     ACTIVE("Active"),
 
     /**
-     * 
-     *             Has not yet started.
-     *           
-     * 
+     * Has not yet started.
      */
     @XmlEnumValue("Inactive")
     INACTIVE("Inactive"),
 
     /**
-     * 
-     *             Overtime, i.e. did not finish within the maximum time set by the organiser.
-     *           
-     * 
+     * Overtime, i.e. did not finish within the maximum time set by the organiser.
      */
     @XmlEnumValue("OverTime")
     OVER_TIME("OverTime"),
 
     /**
-     * 
-     *             Sporting withdrawal (e.g. helping an injured competitor).
-     *           
-     * 
+     * Sporting withdrawal (e.g. helping an injured competitor).
      */
     @XmlEnumValue("SportingWithdrawal")
     SPORTING_WITHDRAWAL("SportingWithdrawal"),
 
     /**
-     * 
-     *             Not competing (i.e. running outside the competition).
-     *           
-     * 
+     * Not competing (i.e. running outside the competition).
      */
     @XmlEnumValue("NotCompeting")
     NOT_COMPETING("NotCompeting"),
 
     /**
-     * 
-     *             Moved to another class.
-     *           
-     * 
+     * Moved to another class.
      */
     @XmlEnumValue("Moved")
     MOVED("Moved"),
 
     /**
-     * 
-     *             Moved to a "better" class, in case of entry restrictions.
-     *           
-     * 
+     * Moved to a "better" class, in case of entry restrictions.
      */
     @XmlEnumValue("MovedUp")
     MOVED_UP("MovedUp"),
 
     /**
-     * 
-     *             Did not start (in this race).
-     *           
-     * 
+     * Did not start (in this race).
      */
     @XmlEnumValue("DidNotStart")
     DID_NOT_START("DidNotStart"),
 
     /**
-     * 
-     *             Did not enter (in this race).
-     *           
-     * 
+     * Did not enter (in this race).
      */
     @XmlEnumValue("DidNotEnter")
     DID_NOT_ENTER("DidNotEnter"),
 
     /**
-     * 
-     *             The competitor has cancelled his/hers entry.
-     *           
-     * 
+     * The competitor has cancelled his/hers entry.
      */
     @XmlEnumValue("Cancelled")
     CANCELLED("Cancelled");
     private final String value;
 
-    ResultStatus(String v) {
+    ResultStatus(String v)
+    {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
-    public static ResultStatus fromValue(String v) {
-        for (ResultStatus c: ResultStatus.values()) {
-            if (c.value.equals(v)) {
+    public static ResultStatus fromValue(String v)
+    {
+        for (ResultStatus c : ResultStatus.values())
+        {
+            if (c.value.equals(v))
+            {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value()
+    {
+        return value;
     }
 
 }

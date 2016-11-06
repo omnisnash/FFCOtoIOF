@@ -15,14 +15,13 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         Element that connects a course with an individual competitor. Courses should be present in the RaceCourseData element and are matched on course name and/or course family. Persons are matched by 1) BibNumber, 2) EntryId.
- *       
- * 
+ * Element that connects a course with an individual competitor. Courses should be present in the RaceCourseData element and are matched on course name and/or course family. Persons are matched by 1) BibNumber, 2) EntryId.
+ * <p>
+ * <p>
  * <p>Classe Java pour PersonCourseAssignment complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PersonCourseAssignment">
  *   &lt;complexContent>
@@ -40,20 +39,19 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PersonCourseAssignment", propOrder = {
-    "entryId",
-    "bibNumber",
-    "personName",
-    "className",
-    "courseName",
-    "courseFamily",
-    "extensions"
+        "entryId",
+        "bibNumber",
+        "personName",
+        "className",
+        "courseName",
+        "courseFamily",
+        "extensions"
 })
-public class PersonCourseAssignment {
+public class PersonCourseAssignment
+{
 
     @XmlElement(name = "EntryId")
     protected Id entryId;
@@ -72,169 +70,155 @@ public class PersonCourseAssignment {
 
     /**
      * Obtient la valeur de la propriété entryId.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Id }
-     *     
+     *
+     * @return possible object is
+     * {@link Id }
      */
-    public Id getEntryId() {
+    public Id getEntryId()
+    {
         return entryId;
     }
 
     /**
      * Définit la valeur de la propriété entryId.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Id }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Id }
      */
-    public void setEntryId(Id value) {
+    public void setEntryId(Id value)
+    {
         this.entryId = value;
     }
 
     /**
      * Obtient la valeur de la propriété bibNumber.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getBibNumber() {
+    public String getBibNumber()
+    {
         return bibNumber;
     }
 
     /**
      * Définit la valeur de la propriété bibNumber.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setBibNumber(String value) {
+    public void setBibNumber(String value)
+    {
         this.bibNumber = value;
     }
 
     /**
      * Obtient la valeur de la propriété personName.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getPersonName() {
+    public String getPersonName()
+    {
         return personName;
     }
 
     /**
      * Définit la valeur de la propriété personName.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setPersonName(String value) {
+    public void setPersonName(String value)
+    {
         this.personName = value;
     }
 
     /**
      * Obtient la valeur de la propriété className.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getClassName() {
+    public String getClassName()
+    {
         return className;
     }
 
     /**
      * Définit la valeur de la propriété className.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setClassName(String value) {
+    public void setClassName(String value)
+    {
         this.className = value;
     }
 
     /**
      * Obtient la valeur de la propriété courseName.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getCourseName() {
+    public String getCourseName()
+    {
         return courseName;
     }
 
     /**
      * Définit la valeur de la propriété courseName.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setCourseName(String value) {
+    public void setCourseName(String value)
+    {
         this.courseName = value;
     }
 
     /**
      * Obtient la valeur de la propriété courseFamily.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getCourseFamily() {
+    public String getCourseFamily()
+    {
         return courseFamily;
     }
 
     /**
      * Définit la valeur de la propriété courseFamily.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setCourseFamily(String value) {
+    public void setCourseFamily(String value)
+    {
         this.courseFamily = value;
     }
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
