@@ -8,27 +8,20 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import java.lang.*;
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         The result list for a single class containing either individual results or team results.
- *       
- * 
+ * The result list for a single class containing either individual results or team results.
+ * <p>
+ * <p>
  * <p>Classe Java pour ClassResult complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ClassResult">
  *   &lt;complexContent>
@@ -46,18 +39,17 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ClassResult", propOrder = {
-    "clazz",
-    "course",
-    "personResult",
-    "teamResult",
-    "extensions"
+        "clazz",
+        "course",
+        "personResult",
+        "teamResult",
+        "extensions"
 })
-public class ClassResult {
+public class ClassResult
+{
 
     @XmlElement(name = "Class", required = true)
     protected Class clazz;
@@ -77,52 +69,50 @@ public class ClassResult {
 
     /**
      * Obtient la valeur de la propriété clazz.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Class }
-     *     
+     *
+     * @return possible object is
+     * {@link Class }
      */
-    public Class getClazz() {
+    public Class getClazz()
+    {
         return clazz;
     }
 
     /**
      * Définit la valeur de la propriété clazz.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Class }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Class }
      */
-    public void setClazz(Class value) {
+    public void setClazz(Class value)
+    {
         this.clazz = value;
     }
 
     /**
      * Gets the value of the course property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the course property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCourse().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SimpleRaceCourse }
-     * 
-     * 
      */
-    public List<SimpleRaceCourse> getCourse() {
-        if (course == null) {
+    public List<SimpleRaceCourse> getCourse()
+    {
+        if (course == null)
+        {
             course = new ArrayList<SimpleRaceCourse>();
         }
         return this.course;
@@ -130,28 +120,28 @@ public class ClassResult {
 
     /**
      * Gets the value of the personResult property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the personResult property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPersonResult().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PersonResult }
-     * 
-     * 
      */
-    public List<PersonResult> getPersonResult() {
-        if (personResult == null) {
+    public List<PersonResult> getPersonResult()
+    {
+        if (personResult == null)
+        {
             personResult = new ArrayList<PersonResult>();
         }
         return this.personResult;
@@ -159,28 +149,28 @@ public class ClassResult {
 
     /**
      * Gets the value of the teamResult property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the teamResult property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTeamResult().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TeamResult }
-     * 
-     * 
      */
-    public List<TeamResult> getTeamResult() {
-        if (teamResult == null) {
+    public List<TeamResult> getTeamResult()
+    {
+        if (teamResult == null)
+        {
             teamResult = new ArrayList<TeamResult>();
         }
         return this.teamResult;
@@ -188,77 +178,73 @@ public class ClassResult {
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété timeResolution.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public double getTimeResolution() {
-        if (timeResolution == null) {
-            return  1.0D;
-        } else {
+    public double getTimeResolution()
+    {
+        if (timeResolution == null)
+        {
+            return 1.0D;
+        } else
+        {
             return timeResolution;
         }
     }
 
     /**
      * Définit la valeur de la propriété timeResolution.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setTimeResolution(Double value) {
+    public void setTimeResolution(Double value)
+    {
         this.timeResolution = value;
     }
 
     /**
      * Obtient la valeur de la propriété modifyTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getModifyTime() {
+    public XMLGregorianCalendar getModifyTime()
+    {
         return modifyTime;
     }
 
     /**
      * Définit la valeur de la propriété modifyTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setModifyTime(XMLGregorianCalendar value) {
+    public void setModifyTime(XMLGregorianCalendar value)
+    {
         this.modifyTime = value;
     }
 

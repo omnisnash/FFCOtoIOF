@@ -8,29 +8,23 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
- * 
- *         Information about an organisation, i.e. address, contact person(s) etc. An organisation is a general term including federations, clubs, etc.
- *       
- * 
+ * Information about an organisation, i.e. address, contact person(s) etc. An organisation is a general term including federations, clubs, etc.
+ * <p>
+ * <p>
  * <p>Classe Java pour Organisation complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Organisation">
  *   &lt;complexContent>
@@ -70,26 +64,25 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Organisation", propOrder = {
-    "id",
-    "name",
-    "shortName",
-    "mediaName",
-    "parentOrganisationId",
-    "country",
-    "address",
-    "contact",
-    "position",
-    "account",
-    "role",
-    "logotype",
-    "extensions"
+        "id",
+        "name",
+        "shortName",
+        "mediaName",
+        "parentOrganisationId",
+        "country",
+        "address",
+        "contact",
+        "position",
+        "account",
+        "role",
+        "logotype",
+        "extensions"
 })
-public class Organisation {
+public class Organisation
+{
 
     @XmlElement(name = "Id")
     protected Id id;
@@ -126,172 +119,160 @@ public class Organisation {
 
     /**
      * Obtient la valeur de la propriété id.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Id }
-     *     
+     *
+     * @return possible object is
+     * {@link Id }
      */
-    public Id getId() {
+    public Id getId()
+    {
         return id;
     }
 
     /**
      * Définit la valeur de la propriété id.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Id }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Id }
      */
-    public void setId(Id value) {
+    public void setId(Id value)
+    {
         this.id = value;
     }
 
     /**
      * Obtient la valeur de la propriété name.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
     /**
      * Définit la valeur de la propriété name.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setName(String value) {
+    public void setName(String value)
+    {
         this.name = value;
     }
 
     /**
      * Obtient la valeur de la propriété shortName.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getShortName() {
+    public String getShortName()
+    {
         return shortName;
     }
 
     /**
      * Définit la valeur de la propriété shortName.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setShortName(String value) {
+    public void setShortName(String value)
+    {
         this.shortName = value;
     }
 
     /**
      * Obtient la valeur de la propriété mediaName.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getMediaName() {
+    public String getMediaName()
+    {
         return mediaName;
     }
 
     /**
      * Définit la valeur de la propriété mediaName.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setMediaName(String value) {
+    public void setMediaName(String value)
+    {
         this.mediaName = value;
     }
 
     /**
      * Obtient la valeur de la propriété parentOrganisationId.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getParentOrganisationId() {
+    public BigInteger getParentOrganisationId()
+    {
         return parentOrganisationId;
     }
 
     /**
      * Définit la valeur de la propriété parentOrganisationId.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setParentOrganisationId(BigInteger value) {
+    public void setParentOrganisationId(BigInteger value)
+    {
         this.parentOrganisationId = value;
     }
 
     /**
      * Obtient la valeur de la propriété country.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Country }
-     *     
+     *
+     * @return possible object is
+     * {@link Country }
      */
-    public Country getCountry() {
+    public Country getCountry()
+    {
         return country;
     }
 
     /**
      * Définit la valeur de la propriété country.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Country }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Country }
      */
-    public void setCountry(Country value) {
+    public void setCountry(Country value)
+    {
         this.country = value;
     }
 
     /**
      * Gets the value of the address property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the address property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAddress().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Address }
-     * 
-     * 
      */
-    public List<Address> getAddress() {
-        if (address == null) {
+    public List<Address> getAddress()
+    {
+        if (address == null)
+        {
             address = new ArrayList<Address>();
         }
         return this.address;
@@ -299,28 +280,28 @@ public class Organisation {
 
     /**
      * Gets the value of the contact property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the contact property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getContact().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Contact }
-     * 
-     * 
      */
-    public List<Contact> getContact() {
-        if (contact == null) {
+    public List<Contact> getContact()
+    {
+        if (contact == null)
+        {
             contact = new ArrayList<Contact>();
         }
         return this.contact;
@@ -328,52 +309,50 @@ public class Organisation {
 
     /**
      * Obtient la valeur de la propriété position.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GeoPosition }
-     *     
+     *
+     * @return possible object is
+     * {@link GeoPosition }
      */
-    public GeoPosition getPosition() {
+    public GeoPosition getPosition()
+    {
         return position;
     }
 
     /**
      * Définit la valeur de la propriété position.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GeoPosition }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GeoPosition }
      */
-    public void setPosition(GeoPosition value) {
+    public void setPosition(GeoPosition value)
+    {
         this.position = value;
     }
 
     /**
      * Gets the value of the account property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the account property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAccount().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Account }
-     * 
-     * 
      */
-    public List<Account> getAccount() {
-        if (account == null) {
+    public List<Account> getAccount()
+    {
+        if (account == null)
+        {
             account = new ArrayList<Account>();
         }
         return this.account;
@@ -381,28 +360,28 @@ public class Organisation {
 
     /**
      * Gets the value of the role property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the role property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRole().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Role }
-     * 
-     * 
      */
-    public List<Role> getRole() {
-        if (role == null) {
+    public List<Role> getRole()
+    {
+        if (role == null)
+        {
             role = new ArrayList<Role>();
         }
         return this.role;
@@ -410,28 +389,28 @@ public class Organisation {
 
     /**
      * Gets the value of the logotype property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the logotype property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getLogotype().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Image }
-     * 
-     * 
      */
-    public List<Image> getLogotype() {
-        if (logotype == null) {
+    public List<Image> getLogotype()
+    {
+        if (logotype == null)
+        {
             logotype = new ArrayList<Image>();
         }
         return this.logotype;
@@ -439,73 +418,67 @@ public class Organisation {
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété type.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getType() {
+    public String getType()
+    {
         return type;
     }
 
     /**
      * Définit la valeur de la propriété type.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setType(String value) {
+    public void setType(String value)
+    {
         this.type = value;
     }
 
     /**
      * Obtient la valeur de la propriété modifyTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getModifyTime() {
+    public XMLGregorianCalendar getModifyTime()
+    {
         return modifyTime;
     }
 
     /**
      * Définit la valeur de la propriété modifyTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setModifyTime(XMLGregorianCalendar value) {
+    public void setModifyTime(XMLGregorianCalendar value)
+    {
         this.modifyTime = value;
     }
 

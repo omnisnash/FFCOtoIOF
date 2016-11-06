@@ -8,23 +8,18 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 
 
 /**
- * 
- *           Defines the name of the start place (e.g. Start 1), if the race has multiple start places.
- *         
- * 
+ * Defines the name of the start place (e.g. Start 1), if the race has multiple start places.
+ * <p>
+ * <p>
  * <p>Classe Java pour StartName complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="StartName">
  *   &lt;simpleContent>
@@ -34,14 +29,13 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "StartName", propOrder = {
-    "value"
+        "value"
 })
-public class StartName {
+public class StartName
+{
 
     @XmlValue
     protected String value;
@@ -50,49 +44,45 @@ public class StartName {
 
     /**
      * Obtient la valeur de la propriété value.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getValue() {
+    public String getValue()
+    {
         return value;
     }
 
     /**
      * Définit la valeur de la propriété value.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setValue(String value) {
+    public void setValue(String value)
+    {
         this.value = value;
     }
 
     /**
      * Obtient la valeur de la propriété raceNumber.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getRaceNumber() {
+    public BigInteger getRaceNumber()
+    {
         return raceNumber;
     }
 
     /**
      * Définit la valeur de la propriété raceNumber.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setRaceNumber(BigInteger value) {
+    public void setRaceNumber(BigInteger value)
+    {
         this.raceNumber = value;
     }
 

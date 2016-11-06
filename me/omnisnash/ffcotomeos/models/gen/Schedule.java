@@ -8,24 +8,18 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         Defines the schedule of sub-events that comprise the entire orienteering event, e.g. banquets, social events and awards ceremonies.
- *       
- * 
+ * Defines the schedule of sub-events that comprise the entire orienteering event, e.g. banquets, social events and awards ceremonies.
+ * <p>
+ * <p>
  * <p>Classe Java pour Schedule complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Schedule">
  *   &lt;complexContent>
@@ -43,19 +37,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Schedule", propOrder = {
-    "startTime",
-    "endTime",
-    "name",
-    "venue",
-    "position",
-    "details"
+        "startTime",
+        "endTime",
+        "name",
+        "venue",
+        "position",
+        "details"
 })
-public class Schedule {
+public class Schedule
+{
 
     @XmlElement(name = "StartTime", required = true)
     @XmlSchemaType(name = "dateTime")
@@ -77,169 +70,155 @@ public class Schedule {
 
     /**
      * Obtient la valeur de la propriété startTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getStartTime() {
+    public XMLGregorianCalendar getStartTime()
+    {
         return startTime;
     }
 
     /**
      * Définit la valeur de la propriété startTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setStartTime(XMLGregorianCalendar value) {
+    public void setStartTime(XMLGregorianCalendar value)
+    {
         this.startTime = value;
     }
 
     /**
      * Obtient la valeur de la propriété endTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getEndTime() {
+    public XMLGregorianCalendar getEndTime()
+    {
         return endTime;
     }
 
     /**
      * Définit la valeur de la propriété endTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setEndTime(XMLGregorianCalendar value) {
+    public void setEndTime(XMLGregorianCalendar value)
+    {
         this.endTime = value;
     }
 
     /**
      * Obtient la valeur de la propriété name.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
     /**
      * Définit la valeur de la propriété name.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setName(String value) {
+    public void setName(String value)
+    {
         this.name = value;
     }
 
     /**
      * Obtient la valeur de la propriété venue.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getVenue() {
+    public String getVenue()
+    {
         return venue;
     }
 
     /**
      * Définit la valeur de la propriété venue.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setVenue(String value) {
+    public void setVenue(String value)
+    {
         this.venue = value;
     }
 
     /**
      * Obtient la valeur de la propriété position.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GeoPosition }
-     *     
+     *
+     * @return possible object is
+     * {@link GeoPosition }
      */
-    public GeoPosition getPosition() {
+    public GeoPosition getPosition()
+    {
         return position;
     }
 
     /**
      * Définit la valeur de la propriété position.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GeoPosition }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GeoPosition }
      */
-    public void setPosition(GeoPosition value) {
+    public void setPosition(GeoPosition value)
+    {
         this.position = value;
     }
 
     /**
      * Obtient la valeur de la propriété details.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getDetails() {
+    public String getDetails()
+    {
         return details;
     }
 
     /**
      * Définit la valeur de la propriété details.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setDetails(String value) {
+    public void setDetails(String value)
+    {
         this.details = value;
     }
 
     /**
      * Obtient la valeur de la propriété modifyTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getModifyTime() {
+    public XMLGregorianCalendar getModifyTime()
+    {
         return modifyTime;
     }
 
     /**
      * Définit la valeur de la propriété modifyTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setModifyTime(XMLGregorianCalendar value) {
+    public void setModifyTime(XMLGregorianCalendar value)
+    {
         this.modifyTime = value;
     }
 

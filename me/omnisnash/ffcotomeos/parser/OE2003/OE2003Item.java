@@ -1,6 +1,6 @@
-package me.omnisnash.ffcotomeos.models;
+package me.omnisnash.ffcotomeos.parser.OE2003;
 
-public class ParsedItem
+public class OE2003Item
 {
     private String competitorId;
     private String competitorSi;
@@ -33,7 +33,7 @@ public class ParsedItem
     private String competitorClubId;
     private String competitorRent;
 
-    public ParsedItem(String csvLine) throws ArrayIndexOutOfBoundsException
+    public OE2003Item(String csvLine) throws ArrayIndexOutOfBoundsException
     {
         String[] parsedLine = csvLine.split(";");
 
@@ -70,8 +70,7 @@ public class ParsedItem
             competitorSecondMail = parsedLine[++column];
             competitorClubId = parsedLine[++column];
             competitorRent = parsedLine[++column];
-        }
-        catch (ArrayIndexOutOfBoundsException e)
+        } catch (ArrayIndexOutOfBoundsException e)
         {
             throw e;
         }

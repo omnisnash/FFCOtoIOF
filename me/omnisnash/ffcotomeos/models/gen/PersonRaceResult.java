@@ -8,27 +8,21 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         Result information for a person in a race.
- *       
- * 
+ * Result information for a person in a race.
+ * <p>
+ * <p>
  * <p>Classe Java pour PersonRaceResult complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PersonRaceResult">
  *   &lt;complexContent>
@@ -57,30 +51,29 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PersonRaceResult", propOrder = {
-    "bibNumber",
-    "startTime",
-    "finishTime",
-    "time",
-    "timeBehind",
-    "position",
-    "status",
-    "score",
-    "overallResult",
-    "course",
-    "splitTime",
-    "controlAnswer",
-    "route",
-    "controlCard",
-    "assignedFee",
-    "serviceRequest",
-    "extensions"
+        "bibNumber",
+        "startTime",
+        "finishTime",
+        "time",
+        "timeBehind",
+        "position",
+        "status",
+        "score",
+        "overallResult",
+        "course",
+        "splitTime",
+        "controlAnswer",
+        "route",
+        "controlCard",
+        "assignedFee",
+        "serviceRequest",
+        "extensions"
 })
-public class PersonRaceResult {
+public class PersonRaceResult
+{
 
     @XmlElement(name = "BibNumber")
     protected String bibNumber;
@@ -124,196 +117,182 @@ public class PersonRaceResult {
 
     /**
      * Obtient la valeur de la propriété bibNumber.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getBibNumber() {
+    public String getBibNumber()
+    {
         return bibNumber;
     }
 
     /**
      * Définit la valeur de la propriété bibNumber.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setBibNumber(String value) {
+    public void setBibNumber(String value)
+    {
         this.bibNumber = value;
     }
 
     /**
      * Obtient la valeur de la propriété startTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getStartTime() {
+    public XMLGregorianCalendar getStartTime()
+    {
         return startTime;
     }
 
     /**
      * Définit la valeur de la propriété startTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setStartTime(XMLGregorianCalendar value) {
+    public void setStartTime(XMLGregorianCalendar value)
+    {
         this.startTime = value;
     }
 
     /**
      * Obtient la valeur de la propriété finishTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getFinishTime() {
+    public XMLGregorianCalendar getFinishTime()
+    {
         return finishTime;
     }
 
     /**
      * Définit la valeur de la propriété finishTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setFinishTime(XMLGregorianCalendar value) {
+    public void setFinishTime(XMLGregorianCalendar value)
+    {
         this.finishTime = value;
     }
 
     /**
      * Obtient la valeur de la propriété time.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getTime() {
+    public Double getTime()
+    {
         return time;
     }
 
     /**
      * Définit la valeur de la propriété time.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setTime(Double value) {
+    public void setTime(Double value)
+    {
         this.time = value;
     }
 
     /**
      * Obtient la valeur de la propriété timeBehind.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getTimeBehind() {
+    public Double getTimeBehind()
+    {
         return timeBehind;
     }
 
     /**
      * Définit la valeur de la propriété timeBehind.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setTimeBehind(Double value) {
+    public void setTimeBehind(Double value)
+    {
         this.timeBehind = value;
     }
 
     /**
      * Obtient la valeur de la propriété position.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getPosition() {
+    public BigInteger getPosition()
+    {
         return position;
     }
 
     /**
      * Définit la valeur de la propriété position.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setPosition(BigInteger value) {
+    public void setPosition(BigInteger value)
+    {
         this.position = value;
     }
 
     /**
      * Obtient la valeur de la propriété status.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ResultStatus }
-     *     
+     *
+     * @return possible object is
+     * {@link ResultStatus }
      */
-    public ResultStatus getStatus() {
+    public ResultStatus getStatus()
+    {
         return status;
     }
 
     /**
      * Définit la valeur de la propriété status.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ResultStatus }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ResultStatus }
      */
-    public void setStatus(ResultStatus value) {
+    public void setStatus(ResultStatus value)
+    {
         this.status = value;
     }
 
     /**
      * Gets the value of the score property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the score property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getScore().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Score }
-     * 
-     * 
      */
-    public List<Score> getScore() {
-        if (score == null) {
+    public List<Score> getScore()
+    {
+        if (score == null)
+        {
             score = new ArrayList<Score>();
         }
         return this.score;
@@ -321,76 +300,72 @@ public class PersonRaceResult {
 
     /**
      * Obtient la valeur de la propriété overallResult.
-     * 
-     * @return
-     *     possible object is
-     *     {@link OverallResult }
-     *     
+     *
+     * @return possible object is
+     * {@link OverallResult }
      */
-    public OverallResult getOverallResult() {
+    public OverallResult getOverallResult()
+    {
         return overallResult;
     }
 
     /**
      * Définit la valeur de la propriété overallResult.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link OverallResult }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link OverallResult }
      */
-    public void setOverallResult(OverallResult value) {
+    public void setOverallResult(OverallResult value)
+    {
         this.overallResult = value;
     }
 
     /**
      * Obtient la valeur de la propriété course.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SimpleCourse }
-     *     
+     *
+     * @return possible object is
+     * {@link SimpleCourse }
      */
-    public SimpleCourse getCourse() {
+    public SimpleCourse getCourse()
+    {
         return course;
     }
 
     /**
      * Définit la valeur de la propriété course.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SimpleCourse }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SimpleCourse }
      */
-    public void setCourse(SimpleCourse value) {
+    public void setCourse(SimpleCourse value)
+    {
         this.course = value;
     }
 
     /**
      * Gets the value of the splitTime property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the splitTime property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSplitTime().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SplitTime }
-     * 
-     * 
      */
-    public List<SplitTime> getSplitTime() {
-        if (splitTime == null) {
+    public List<SplitTime> getSplitTime()
+    {
+        if (splitTime == null)
+        {
             splitTime = new ArrayList<SplitTime>();
         }
         return this.splitTime;
@@ -398,28 +373,28 @@ public class PersonRaceResult {
 
     /**
      * Gets the value of the controlAnswer property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the controlAnswer property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getControlAnswer().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ControlAnswer }
-     * 
-     * 
      */
-    public List<ControlAnswer> getControlAnswer() {
-        if (controlAnswer == null) {
+    public List<ControlAnswer> getControlAnswer()
+    {
+        if (controlAnswer == null)
+        {
             controlAnswer = new ArrayList<ControlAnswer>();
         }
         return this.controlAnswer;
@@ -427,52 +402,50 @@ public class PersonRaceResult {
 
     /**
      * Obtient la valeur de la propriété route.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Route }
-     *     
+     *
+     * @return possible object is
+     * {@link Route }
      */
-    public Route getRoute() {
+    public Route getRoute()
+    {
         return route;
     }
 
     /**
      * Définit la valeur de la propriété route.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Route }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Route }
      */
-    public void setRoute(Route value) {
+    public void setRoute(Route value)
+    {
         this.route = value;
     }
 
     /**
      * Gets the value of the controlCard property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the controlCard property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getControlCard().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ControlCard }
-     * 
-     * 
      */
-    public List<ControlCard> getControlCard() {
-        if (controlCard == null) {
+    public List<ControlCard> getControlCard()
+    {
+        if (controlCard == null)
+        {
             controlCard = new ArrayList<ControlCard>();
         }
         return this.controlCard;
@@ -480,28 +453,28 @@ public class PersonRaceResult {
 
     /**
      * Gets the value of the assignedFee property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the assignedFee property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAssignedFee().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AssignedFee }
-     * 
-     * 
      */
-    public List<AssignedFee> getAssignedFee() {
-        if (assignedFee == null) {
+    public List<AssignedFee> getAssignedFee()
+    {
+        if (assignedFee == null)
+        {
             assignedFee = new ArrayList<AssignedFee>();
         }
         return this.assignedFee;
@@ -509,28 +482,28 @@ public class PersonRaceResult {
 
     /**
      * Gets the value of the serviceRequest property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the serviceRequest property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getServiceRequest().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ServiceRequest }
-     * 
-     * 
      */
-    public List<ServiceRequest> getServiceRequest() {
-        if (serviceRequest == null) {
+    public List<ServiceRequest> getServiceRequest()
+    {
+        if (serviceRequest == null)
+        {
             serviceRequest = new ArrayList<ServiceRequest>();
         }
         return this.serviceRequest;
@@ -538,49 +511,45 @@ public class PersonRaceResult {
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété raceNumber.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getRaceNumber() {
+    public BigInteger getRaceNumber()
+    {
         return raceNumber;
     }
 
     /**
      * Définit la valeur de la propriété raceNumber.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setRaceNumber(BigInteger value) {
+    public void setRaceNumber(BigInteger value)
+    {
         this.raceNumber = value;
     }
 

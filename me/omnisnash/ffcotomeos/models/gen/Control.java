@@ -8,26 +8,20 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         Defines a control, without any relationship to a particular course.
- *       
- * 
+ * Defines a control, without any relationship to a particular course.
+ * <p>
+ * <p>
  * <p>Classe Java pour Control complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Control">
  *   &lt;complexContent>
@@ -46,19 +40,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Control", propOrder = {
-    "id",
-    "punchingUnitId",
-    "name",
-    "position",
-    "mapPosition",
-    "extensions"
+        "id",
+        "punchingUnitId",
+        "name",
+        "position",
+        "mapPosition",
+        "extensions"
 })
-public class Control {
+public class Control
+{
 
     @XmlElement(name = "Id")
     protected Id id;
@@ -80,52 +73,50 @@ public class Control {
 
     /**
      * Obtient la valeur de la propriété id.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Id }
-     *     
+     *
+     * @return possible object is
+     * {@link Id }
      */
-    public Id getId() {
+    public Id getId()
+    {
         return id;
     }
 
     /**
      * Définit la valeur de la propriété id.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Id }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Id }
      */
-    public void setId(Id value) {
+    public void setId(Id value)
+    {
         this.id = value;
     }
 
     /**
      * Gets the value of the punchingUnitId property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the punchingUnitId property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPunchingUnitId().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Id }
-     * 
-     * 
      */
-    public List<Id> getPunchingUnitId() {
-        if (punchingUnitId == null) {
+    public List<Id> getPunchingUnitId()
+    {
+        if (punchingUnitId == null)
+        {
             punchingUnitId = new ArrayList<Id>();
         }
         return this.punchingUnitId;
@@ -133,28 +124,28 @@ public class Control {
 
     /**
      * Gets the value of the name property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the name property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getName().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link LanguageString }
-     * 
-     * 
      */
-    public List<LanguageString> getName() {
-        if (name == null) {
+    public List<LanguageString> getName()
+    {
+        if (name == null)
+        {
             name = new ArrayList<LanguageString>();
         }
         return this.name;
@@ -162,125 +153,117 @@ public class Control {
 
     /**
      * Obtient la valeur de la propriété position.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GeoPosition }
-     *     
+     *
+     * @return possible object is
+     * {@link GeoPosition }
      */
-    public GeoPosition getPosition() {
+    public GeoPosition getPosition()
+    {
         return position;
     }
 
     /**
      * Définit la valeur de la propriété position.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GeoPosition }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GeoPosition }
      */
-    public void setPosition(GeoPosition value) {
+    public void setPosition(GeoPosition value)
+    {
         this.position = value;
     }
 
     /**
      * Obtient la valeur de la propriété mapPosition.
-     * 
-     * @return
-     *     possible object is
-     *     {@link MapPosition }
-     *     
+     *
+     * @return possible object is
+     * {@link MapPosition }
      */
-    public MapPosition getMapPosition() {
+    public MapPosition getMapPosition()
+    {
         return mapPosition;
     }
 
     /**
      * Définit la valeur de la propriété mapPosition.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link MapPosition }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link MapPosition }
      */
-    public void setMapPosition(MapPosition value) {
+    public void setMapPosition(MapPosition value)
+    {
         this.mapPosition = value;
     }
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété type.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ControlType }
-     *     
+     *
+     * @return possible object is
+     * {@link ControlType }
      */
-    public ControlType getType() {
-        if (type == null) {
+    public ControlType getType()
+    {
+        if (type == null)
+        {
             return ControlType.CONTROL;
-        } else {
+        } else
+        {
             return type;
         }
     }
 
     /**
      * Définit la valeur de la propriété type.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ControlType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ControlType }
      */
-    public void setType(ControlType value) {
+    public void setType(ControlType value)
+    {
         this.type = value;
     }
 
     /**
      * Obtient la valeur de la propriété modifyTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getModifyTime() {
+    public XMLGregorianCalendar getModifyTime()
+    {
         return modifyTime;
     }
 
     /**
      * Définit la valeur de la propriété modifyTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setModifyTime(XMLGregorianCalendar value) {
+    public void setModifyTime(XMLGregorianCalendar value)
+    {
         this.modifyTime = value;
     }
 

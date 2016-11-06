@@ -8,23 +8,22 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
- * 
- *         Service requests made by a person.
- *       
- * 
+ * Service requests made by a person.
+ * <p>
+ * <p>
  * <p>Classe Java pour PersonServiceRequest complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PersonServiceRequest">
  *   &lt;complexContent>
@@ -37,15 +36,14 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PersonServiceRequest", propOrder = {
-    "person",
-    "serviceRequest"
+        "person",
+        "serviceRequest"
 })
-public class PersonServiceRequest {
+public class PersonServiceRequest
+{
 
     @XmlElement(name = "Person", required = true)
     protected Person person;
@@ -54,52 +52,50 @@ public class PersonServiceRequest {
 
     /**
      * Obtient la valeur de la propriété person.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Person }
-     *     
+     *
+     * @return possible object is
+     * {@link Person }
      */
-    public Person getPerson() {
+    public Person getPerson()
+    {
         return person;
     }
 
     /**
      * Définit la valeur de la propriété person.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Person }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Person }
      */
-    public void setPerson(Person value) {
+    public void setPerson(Person value)
+    {
         this.person = value;
     }
 
     /**
      * Gets the value of the serviceRequest property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the serviceRequest property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getServiceRequest().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ServiceRequest }
-     * 
-     * 
      */
-    public List<ServiceRequest> getServiceRequest() {
-        if (serviceRequest == null) {
+    public List<ServiceRequest> getServiceRequest()
+    {
+        if (serviceRequest == null)
+        {
             serviceRequest = new ArrayList<ServiceRequest>();
         }
         return this.serviceRequest;

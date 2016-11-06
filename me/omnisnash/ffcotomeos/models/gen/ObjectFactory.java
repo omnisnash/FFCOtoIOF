@@ -12,659 +12,659 @@ import javax.xml.bind.annotation.XmlRegistry;
 
 
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the me.omnisnash.ffcotomeos.models package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
+ * This object contains factory methods for each
+ * Java content interface and Java element interface
+ * generated in the me.omnisnash.ffcotomeos.models package.
+ * <p>An ObjectFactory allows you to programatically
+ * construct new instances of the Java representation
+ * for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces
+ * and classes representing the binding of schema
+ * type definitions, element declarations and model
+ * groups.  Factory methods for each of these are
  * provided in this class.
- * 
  */
 @XmlRegistry
-public class ObjectFactory {
+public class ObjectFactory
+{
 
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: me.omnisnash.ffcotomeos.models
-     * 
      */
-    public ObjectFactory() {
+    public ObjectFactory()
+    {
     }
 
     /**
      * Create an instance of {@link TeamMemberRaceResult }
-     * 
      */
-    public TeamMemberRaceResult createTeamMemberRaceResult() {
+    public TeamMemberRaceResult createTeamMemberRaceResult()
+    {
         return new TeamMemberRaceResult();
     }
 
     /**
      * Create an instance of {@link CompetitorList }
-     * 
      */
-    public CompetitorList createCompetitorList() {
+    public CompetitorList createCompetitorList()
+    {
         return new CompetitorList();
     }
 
     /**
      * Create an instance of {@link Competitor }
-     * 
      */
-    public Competitor createCompetitor() {
+    public Competitor createCompetitor()
+    {
         return new Competitor();
     }
 
     /**
      * Create an instance of {@link Extensions }
-     * 
      */
-    public Extensions createExtensions() {
+    public Extensions createExtensions()
+    {
         return new Extensions();
     }
 
     /**
      * Create an instance of {@link ControlCardList }
-     * 
      */
-    public ControlCardList createControlCardList() {
+    public ControlCardList createControlCardList()
+    {
         return new ControlCardList();
     }
 
     /**
      * Create an instance of {@link ControlCard }
-     * 
      */
-    public ControlCard createControlCard() {
+    public ControlCard createControlCard()
+    {
         return new ControlCard();
     }
 
     /**
      * Create an instance of {@link OrganisationList }
-     * 
      */
-    public OrganisationList createOrganisationList() {
+    public OrganisationList createOrganisationList()
+    {
         return new OrganisationList();
     }
 
     /**
      * Create an instance of {@link Organisation }
-     * 
      */
-    public Organisation createOrganisation() {
+    public Organisation createOrganisation()
+    {
         return new Organisation();
     }
 
     /**
      * Create an instance of {@link ResultList }
-     * 
      */
-    public ResultList createResultList() {
+    public ResultList createResultList()
+    {
         return new ResultList();
     }
 
     /**
      * Create an instance of {@link Event }
-     * 
      */
-    public Event createEvent() {
+    public Event createEvent()
+    {
         return new Event();
     }
 
     /**
      * Create an instance of {@link ClassResult }
-     * 
      */
-    public ClassResult createClassResult() {
+    public ClassResult createClassResult()
+    {
         return new ClassResult();
     }
 
     /**
      * Create an instance of {@link CourseData }
-     * 
      */
-    public CourseData createCourseData() {
+    public CourseData createCourseData()
+    {
         return new CourseData();
     }
 
     /**
      * Create an instance of {@link RaceCourseData }
-     * 
      */
-    public RaceCourseData createRaceCourseData() {
+    public RaceCourseData createRaceCourseData()
+    {
         return new RaceCourseData();
     }
 
     /**
      * Create an instance of {@link StartList }
-     * 
      */
-    public StartList createStartList() {
+    public StartList createStartList()
+    {
         return new StartList();
     }
 
     /**
      * Create an instance of {@link ClassStart }
-     * 
      */
-    public ClassStart createClassStart() {
+    public ClassStart createClassStart()
+    {
         return new ClassStart();
     }
 
     /**
      * Create an instance of {@link EventList }
-     * 
      */
-    public EventList createEventList() {
+    public EventList createEventList()
+    {
         return new EventList();
     }
 
     /**
      * Create an instance of {@link EntryList }
-     * 
      */
-    public EntryList createEntryList() {
+    public EntryList createEntryList()
+    {
         return new EntryList();
     }
 
     /**
      * Create an instance of {@link TeamEntry }
-     * 
      */
-    public TeamEntry createTeamEntry() {
+    public TeamEntry createTeamEntry()
+    {
         return new TeamEntry();
     }
 
     /**
      * Create an instance of {@link PersonEntry }
-     * 
      */
-    public PersonEntry createPersonEntry() {
+    public PersonEntry createPersonEntry()
+    {
         return new PersonEntry();
     }
 
     /**
      * Create an instance of {@link ClassList }
-     * 
      */
-    public ClassList createClassList() {
+    public ClassList createClassList()
+    {
         return new ClassList();
     }
 
     /**
      * Create an instance of {@link Class }
-     * 
      */
-    public Class createClass() {
+    public Class createClass()
+    {
         return new Class();
     }
 
     /**
      * Create an instance of {@link ServiceRequestList }
-     * 
      */
-    public ServiceRequestList createServiceRequestList() {
+    public ServiceRequestList createServiceRequestList()
+    {
         return new ServiceRequestList();
     }
 
     /**
      * Create an instance of {@link OrganisationServiceRequest }
-     * 
      */
-    public OrganisationServiceRequest createOrganisationServiceRequest() {
+    public OrganisationServiceRequest createOrganisationServiceRequest()
+    {
         return new OrganisationServiceRequest();
     }
 
     /**
      * Create an instance of {@link PersonServiceRequest }
-     * 
      */
-    public PersonServiceRequest createPersonServiceRequest() {
+    public PersonServiceRequest createPersonServiceRequest()
+    {
         return new PersonServiceRequest();
     }
 
     /**
      * Create an instance of {@link ClassCourseAssignment }
-     * 
      */
-    public ClassCourseAssignment createClassCourseAssignment() {
+    public ClassCourseAssignment createClassCourseAssignment()
+    {
         return new ClassCourseAssignment();
     }
 
     /**
      * Create an instance of {@link PersonResult }
-     * 
      */
-    public PersonResult createPersonResult() {
+    public PersonResult createPersonResult()
+    {
         return new PersonResult();
     }
 
     /**
      * Create an instance of {@link PersonRaceResult }
-     * 
      */
-    public PersonRaceResult createPersonRaceResult() {
+    public PersonRaceResult createPersonRaceResult()
+    {
         return new PersonRaceResult();
     }
 
     /**
      * Create an instance of {@link Account }
-     * 
      */
-    public Account createAccount() {
+    public Account createAccount()
+    {
         return new Account();
     }
 
     /**
      * Create an instance of {@link SimpleRaceCourse }
-     * 
      */
-    public SimpleRaceCourse createSimpleRaceCourse() {
+    public SimpleRaceCourse createSimpleRaceCourse()
+    {
         return new SimpleRaceCourse();
     }
 
     /**
      * Create an instance of {@link Address }
-     * 
      */
-    public Address createAddress() {
+    public Address createAddress()
+    {
         return new Address();
     }
 
     /**
      * Create an instance of {@link RaceClass }
-     * 
      */
-    public RaceClass createRaceClass() {
+    public RaceClass createRaceClass()
+    {
         return new RaceClass();
     }
 
     /**
      * Create an instance of {@link AssignedFee }
-     * 
      */
-    public AssignedFee createAssignedFee() {
+    public AssignedFee createAssignedFee()
+    {
         return new AssignedFee();
     }
 
     /**
      * Create an instance of {@link TeamMemberResult }
-     * 
      */
-    public TeamMemberResult createTeamMemberResult() {
+    public TeamMemberResult createTeamMemberResult()
+    {
         return new TeamMemberResult();
     }
 
     /**
      * Create an instance of {@link InformationItem }
-     * 
      */
-    public InformationItem createInformationItem() {
+    public InformationItem createInformationItem()
+    {
         return new InformationItem();
     }
 
     /**
      * Create an instance of {@link Image }
-     * 
      */
-    public Image createImage() {
+    public Image createImage()
+    {
         return new Image();
     }
 
     /**
      * Create an instance of {@link PersonStart }
-     * 
      */
-    public PersonStart createPersonStart() {
+    public PersonStart createPersonStart()
+    {
         return new PersonStart();
     }
 
     /**
      * Create an instance of {@link ControlAnswer }
-     * 
      */
-    public ControlAnswer createControlAnswer() {
+    public ControlAnswer createControlAnswer()
+    {
         return new ControlAnswer();
     }
 
     /**
      * Create an instance of {@link EntryReceiver }
-     * 
      */
-    public EntryReceiver createEntryReceiver() {
+    public EntryReceiver createEntryReceiver()
+    {
         return new EntryReceiver();
     }
 
     /**
      * Create an instance of {@link SimpleCourse }
-     * 
      */
-    public SimpleCourse createSimpleCourse() {
+    public SimpleCourse createSimpleCourse()
+    {
         return new SimpleCourse();
     }
 
     /**
      * Create an instance of {@link Course }
-     * 
      */
-    public Course createCourse() {
+    public Course createCourse()
+    {
         return new Course();
     }
 
     /**
      * Create an instance of {@link TeamCourseAssignment }
-     * 
      */
-    public TeamCourseAssignment createTeamCourseAssignment() {
+    public TeamCourseAssignment createTeamCourseAssignment()
+    {
         return new TeamCourseAssignment();
     }
 
     /**
      * Create an instance of {@link Route }
-     * 
      */
-    public Route createRoute() {
+    public Route createRoute()
+    {
         return new Route();
     }
 
     /**
      * Create an instance of {@link TeamStart }
-     * 
      */
-    public TeamStart createTeamStart() {
+    public TeamStart createTeamStart()
+    {
         return new TeamStart();
     }
 
     /**
      * Create an instance of {@link OverallResult }
-     * 
      */
-    public OverallResult createOverallResult() {
+    public OverallResult createOverallResult()
+    {
         return new OverallResult();
     }
 
     /**
      * Create an instance of {@link TeamMemberStart }
-     * 
      */
-    public TeamMemberStart createTeamMemberStart() {
+    public TeamMemberStart createTeamMemberStart()
+    {
         return new TeamMemberStart();
     }
 
     /**
      * Create an instance of {@link ServiceRequest }
-     * 
      */
-    public ServiceRequest createServiceRequest() {
+    public ServiceRequest createServiceRequest()
+    {
         return new ServiceRequest();
     }
 
     /**
      * Create an instance of {@link Role }
-     * 
      */
-    public Role createRole() {
+    public Role createRole()
+    {
         return new Role();
     }
 
     /**
      * Create an instance of {@link DateAndOptionalTime }
-     * 
      */
-    public DateAndOptionalTime createDateAndOptionalTime() {
+    public DateAndOptionalTime createDateAndOptionalTime()
+    {
         return new DateAndOptionalTime();
     }
 
     /**
      * Create an instance of {@link Score }
-     * 
      */
-    public Score createScore() {
+    public Score createScore()
+    {
         return new Score();
     }
 
     /**
      * Create an instance of {@link CourseControl }
-     * 
      */
-    public CourseControl createCourseControl() {
+    public CourseControl createCourseControl()
+    {
         return new CourseControl();
     }
 
     /**
      * Create an instance of {@link Country }
-     * 
      */
-    public Country createCountry() {
+    public Country createCountry()
+    {
         return new Country();
     }
 
     /**
      * Create an instance of {@link Id }
-     * 
      */
-    public Id createId() {
+    public Id createId()
+    {
         return new Id();
     }
 
     /**
      * Create an instance of {@link Person }
-     * 
      */
-    public Person createPerson() {
+    public Person createPerson()
+    {
         return new Person();
     }
 
     /**
      * Create an instance of {@link Map }
-     * 
      */
-    public Map createMap() {
+    public Map createMap()
+    {
         return new Map();
     }
 
     /**
      * Create an instance of {@link StartTimeAllocationRequest }
-     * 
      */
-    public StartTimeAllocationRequest createStartTimeAllocationRequest() {
+    public StartTimeAllocationRequest createStartTimeAllocationRequest()
+    {
         return new StartTimeAllocationRequest();
     }
 
     /**
      * Create an instance of {@link TeamMemberRaceStart }
-     * 
      */
-    public TeamMemberRaceStart createTeamMemberRaceStart() {
+    public TeamMemberRaceStart createTeamMemberRaceStart()
+    {
         return new TeamMemberRaceStart();
     }
 
     /**
      * Create an instance of {@link PersonRaceStart }
-     * 
      */
-    public PersonRaceStart createPersonRaceStart() {
+    public PersonRaceStart createPersonRaceStart()
+    {
         return new PersonRaceStart();
     }
 
     /**
      * Create an instance of {@link Control }
-     * 
      */
-    public Control createControl() {
+    public Control createControl()
+    {
         return new Control();
     }
 
     /**
      * Create an instance of {@link LanguageString }
-     * 
      */
-    public LanguageString createLanguageString() {
+    public LanguageString createLanguageString()
+    {
         return new LanguageString();
     }
 
     /**
      * Create an instance of {@link PersonCourseAssignment }
-     * 
      */
-    public PersonCourseAssignment createPersonCourseAssignment() {
+    public PersonCourseAssignment createPersonCourseAssignment()
+    {
         return new PersonCourseAssignment();
     }
 
     /**
      * Create an instance of {@link Race }
-     * 
      */
-    public Race createRace() {
+    public Race createRace()
+    {
         return new Race();
     }
 
     /**
      * Create an instance of {@link TeamMemberCourseAssignment }
-     * 
      */
-    public TeamMemberCourseAssignment createTeamMemberCourseAssignment() {
+    public TeamMemberCourseAssignment createTeamMemberCourseAssignment()
+    {
         return new TeamMemberCourseAssignment();
     }
 
     /**
      * Create an instance of {@link TeamResult }
-     * 
      */
-    public TeamResult createTeamResult() {
+    public TeamResult createTeamResult()
+    {
         return new TeamResult();
     }
 
     /**
      * Create an instance of {@link PersonName }
-     * 
      */
-    public PersonName createPersonName() {
+    public PersonName createPersonName()
+    {
         return new PersonName();
     }
 
     /**
      * Create an instance of {@link Fee }
-     * 
      */
-    public Fee createFee() {
+    public Fee createFee()
+    {
         return new Fee();
     }
 
     /**
      * Create an instance of {@link Amount }
-     * 
      */
-    public Amount createAmount() {
+    public Amount createAmount()
+    {
         return new Amount();
     }
 
     /**
      * Create an instance of {@link StartName }
-     * 
      */
-    public StartName createStartName() {
+    public StartName createStartName()
+    {
         return new StartName();
     }
 
     /**
      * Create an instance of {@link Service }
-     * 
      */
-    public Service createService() {
+    public Service createService()
+    {
         return new Service();
     }
 
     /**
      * Create an instance of {@link ClassType }
-     * 
      */
-    public ClassType createClassType() {
+    public ClassType createClassType()
+    {
         return new ClassType();
     }
 
     /**
      * Create an instance of {@link SplitTime }
-     * 
      */
-    public SplitTime createSplitTime() {
+    public SplitTime createSplitTime()
+    {
         return new SplitTime();
     }
 
     /**
      * Create an instance of {@link Leg }
-     * 
      */
-    public Leg createLeg() {
+    public Leg createLeg()
+    {
         return new Leg();
     }
 
     /**
      * Create an instance of {@link Contact }
-     * 
      */
-    public Contact createContact() {
+    public Contact createContact()
+    {
         return new Contact();
     }
 
     /**
      * Create an instance of {@link Schedule }
-     * 
      */
-    public Schedule createSchedule() {
+    public Schedule createSchedule()
+    {
         return new Schedule();
     }
 
     /**
      * Create an instance of {@link TeamEntryPerson }
-     * 
      */
-    public TeamEntryPerson createTeamEntryPerson() {
+    public TeamEntryPerson createTeamEntryPerson()
+    {
         return new TeamEntryPerson();
     }
 
     /**
      * Create an instance of {@link EventURL }
-     * 
      */
-    public EventURL createEventURL() {
+    public EventURL createEventURL()
+    {
         return new EventURL();
     }
 
     /**
      * Create an instance of {@link GeoPosition }
-     * 
      */
-    public GeoPosition createGeoPosition() {
+    public GeoPosition createGeoPosition()
+    {
         return new GeoPosition();
     }
 
     /**
      * Create an instance of {@link MapPosition }
-     * 
      */
-    public MapPosition createMapPosition() {
+    public MapPosition createMapPosition()
+    {
         return new MapPosition();
     }
 
     /**
      * Create an instance of {@link TeamMemberRaceResult.TimeBehind }
-     * 
      */
-    public TeamMemberRaceResult.TimeBehind createTeamMemberRaceResultTimeBehind() {
+    public TeamMemberRaceResult.TimeBehind createTeamMemberRaceResultTimeBehind()
+    {
         return new TeamMemberRaceResult.TimeBehind();
     }
 
     /**
      * Create an instance of {@link TeamMemberRaceResult.Position }
-     * 
      */
-    public TeamMemberRaceResult.Position createTeamMemberRaceResultPosition() {
+    public TeamMemberRaceResult.Position createTeamMemberRaceResultPosition()
+    {
         return new TeamMemberRaceResult.Position();
     }
 

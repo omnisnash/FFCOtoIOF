@@ -8,22 +8,17 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * <p>Classe Java pour ServiceRequest complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ServiceRequest">
  *   &lt;complexContent>
@@ -42,20 +37,19 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ServiceRequest", propOrder = {
-    "id",
-    "service",
-    "requestedQuantity",
-    "deliveredQuantity",
-    "comment",
-    "assignedFee",
-    "extensions"
+        "id",
+        "service",
+        "requestedQuantity",
+        "deliveredQuantity",
+        "comment",
+        "assignedFee",
+        "extensions"
 })
-public class ServiceRequest {
+public class ServiceRequest
+{
 
     @XmlElement(name = "Id")
     protected Id id;
@@ -77,140 +71,132 @@ public class ServiceRequest {
 
     /**
      * Obtient la valeur de la propriété id.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Id }
-     *     
+     *
+     * @return possible object is
+     * {@link Id }
      */
-    public Id getId() {
+    public Id getId()
+    {
         return id;
     }
 
     /**
      * Définit la valeur de la propriété id.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Id }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Id }
      */
-    public void setId(Id value) {
+    public void setId(Id value)
+    {
         this.id = value;
     }
 
     /**
      * Obtient la valeur de la propriété service.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Service }
-     *     
+     *
+     * @return possible object is
+     * {@link Service }
      */
-    public Service getService() {
+    public Service getService()
+    {
         return service;
     }
 
     /**
      * Définit la valeur de la propriété service.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Service }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Service }
      */
-    public void setService(Service value) {
+    public void setService(Service value)
+    {
         this.service = value;
     }
 
     /**
      * Obtient la valeur de la propriété requestedQuantity.
-     * 
      */
-    public double getRequestedQuantity() {
+    public double getRequestedQuantity()
+    {
         return requestedQuantity;
     }
 
     /**
      * Définit la valeur de la propriété requestedQuantity.
-     * 
      */
-    public void setRequestedQuantity(double value) {
+    public void setRequestedQuantity(double value)
+    {
         this.requestedQuantity = value;
     }
 
     /**
      * Obtient la valeur de la propriété deliveredQuantity.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getDeliveredQuantity() {
+    public Double getDeliveredQuantity()
+    {
         return deliveredQuantity;
     }
 
     /**
      * Définit la valeur de la propriété deliveredQuantity.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setDeliveredQuantity(Double value) {
+    public void setDeliveredQuantity(Double value)
+    {
         this.deliveredQuantity = value;
     }
 
     /**
      * Obtient la valeur de la propriété comment.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getComment() {
+    public String getComment()
+    {
         return comment;
     }
 
     /**
      * Définit la valeur de la propriété comment.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setComment(String value) {
+    public void setComment(String value)
+    {
         this.comment = value;
     }
 
     /**
      * Gets the value of the assignedFee property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the assignedFee property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAssignedFee().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AssignedFee }
-     * 
-     * 
      */
-    public List<AssignedFee> getAssignedFee() {
-        if (assignedFee == null) {
+    public List<AssignedFee> getAssignedFee()
+    {
+        if (assignedFee == null)
+        {
             assignedFee = new ArrayList<AssignedFee>();
         }
         return this.assignedFee;
@@ -218,49 +204,45 @@ public class ServiceRequest {
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété modifyTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getModifyTime() {
+    public XMLGregorianCalendar getModifyTime()
+    {
         return modifyTime;
     }
 
     /**
      * Définit la valeur de la propriété modifyTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setModifyTime(XMLGregorianCalendar value) {
+    public void setModifyTime(XMLGregorianCalendar value)
+    {
         this.modifyTime = value;
     }
 

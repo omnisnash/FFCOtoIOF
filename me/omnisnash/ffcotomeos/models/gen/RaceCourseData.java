@@ -8,25 +8,20 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         This element defines all the control and course information for a race.
- *       
- * 
+ * This element defines all the control and course information for a race.
+ * <p>
+ * <p>
  * <p>Classe Java pour RaceCourseData complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="RaceCourseData">
  *   &lt;complexContent>
@@ -45,20 +40,19 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RaceCourseData", propOrder = {
-    "map",
-    "control",
-    "course",
-    "classCourseAssignment",
-    "personCourseAssignment",
-    "teamCourseAssignment",
-    "extensions"
+        "map",
+        "control",
+        "course",
+        "classCourseAssignment",
+        "personCourseAssignment",
+        "teamCourseAssignment",
+        "extensions"
 })
-public class RaceCourseData {
+public class RaceCourseData
+{
 
     @XmlElement(name = "Map")
     protected List<Map> map;
@@ -79,28 +73,28 @@ public class RaceCourseData {
 
     /**
      * Gets the value of the map property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the map property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getMap().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Map }
-     * 
-     * 
      */
-    public List<Map> getMap() {
-        if (map == null) {
+    public List<Map> getMap()
+    {
+        if (map == null)
+        {
             map = new ArrayList<Map>();
         }
         return this.map;
@@ -108,28 +102,28 @@ public class RaceCourseData {
 
     /**
      * Gets the value of the control property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the control property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getControl().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Control }
-     * 
-     * 
      */
-    public List<Control> getControl() {
-        if (control == null) {
+    public List<Control> getControl()
+    {
+        if (control == null)
+        {
             control = new ArrayList<Control>();
         }
         return this.control;
@@ -137,28 +131,28 @@ public class RaceCourseData {
 
     /**
      * Gets the value of the course property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the course property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCourse().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Course }
-     * 
-     * 
      */
-    public List<Course> getCourse() {
-        if (course == null) {
+    public List<Course> getCourse()
+    {
+        if (course == null)
+        {
             course = new ArrayList<Course>();
         }
         return this.course;
@@ -166,28 +160,28 @@ public class RaceCourseData {
 
     /**
      * Gets the value of the classCourseAssignment property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the classCourseAssignment property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getClassCourseAssignment().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ClassCourseAssignment }
-     * 
-     * 
      */
-    public List<ClassCourseAssignment> getClassCourseAssignment() {
-        if (classCourseAssignment == null) {
+    public List<ClassCourseAssignment> getClassCourseAssignment()
+    {
+        if (classCourseAssignment == null)
+        {
             classCourseAssignment = new ArrayList<ClassCourseAssignment>();
         }
         return this.classCourseAssignment;
@@ -195,28 +189,28 @@ public class RaceCourseData {
 
     /**
      * Gets the value of the personCourseAssignment property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the personCourseAssignment property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPersonCourseAssignment().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PersonCourseAssignment }
-     * 
-     * 
      */
-    public List<PersonCourseAssignment> getPersonCourseAssignment() {
-        if (personCourseAssignment == null) {
+    public List<PersonCourseAssignment> getPersonCourseAssignment()
+    {
+        if (personCourseAssignment == null)
+        {
             personCourseAssignment = new ArrayList<PersonCourseAssignment>();
         }
         return this.personCourseAssignment;
@@ -224,28 +218,28 @@ public class RaceCourseData {
 
     /**
      * Gets the value of the teamCourseAssignment property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the teamCourseAssignment property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTeamCourseAssignment().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TeamCourseAssignment }
-     * 
-     * 
      */
-    public List<TeamCourseAssignment> getTeamCourseAssignment() {
-        if (teamCourseAssignment == null) {
+    public List<TeamCourseAssignment> getTeamCourseAssignment()
+    {
+        if (teamCourseAssignment == null)
+        {
             teamCourseAssignment = new ArrayList<TeamCourseAssignment>();
         }
         return this.teamCourseAssignment;
@@ -253,49 +247,45 @@ public class RaceCourseData {
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété raceNumber.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
-    public BigInteger getRaceNumber() {
+    public BigInteger getRaceNumber()
+    {
         return raceNumber;
     }
 
     /**
      * Définit la valeur de la propriété raceNumber.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
-    public void setRaceNumber(BigInteger value) {
+    public void setRaceNumber(BigInteger value)
+    {
         this.raceNumber = value;
     }
 

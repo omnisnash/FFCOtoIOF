@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java pour EventClassStatus.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * <p>
  * <pre>
@@ -29,74 +29,64 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "EventClassStatus")
 @XmlEnum
-public enum EventClassStatus {
+public enum EventClassStatus
+{
 
 
     /**
-     * 
-     *             The default status.
-     *           
-     * 
+     * The default status.
      */
     @XmlEnumValue("Normal")
     NORMAL("Normal"),
 
     /**
-     * 
-     *             The class has been divided in two or more classes due to a large number of entries.
-     *           
-     * 
+     * The class has been divided in two or more classes due to a large number of entries.
      */
     @XmlEnumValue("Divided")
     DIVIDED("Divided"),
 
     /**
-     * 
-     *             The class has been joined with another class due to a small number of entries.
-     *           
-     * 
+     * The class has been joined with another class due to a small number of entries.
      */
     @XmlEnumValue("Joined")
     JOINED("Joined"),
 
     /**
-     * 
-     *             The results are considered invalid due to technical issues such as misplaced controls. Entry fees are not refunded.
-     *           
-     * 
+     * The results are considered invalid due to technical issues such as misplaced controls. Entry fees are not refunded.
      */
     @XmlEnumValue("Invalidated")
     INVALIDATED("Invalidated"),
 
     /**
-     * 
-     *             The results are considered invalid due to technical issues such as misplaced controls. Entry fees are refunded.
-     *           
-     * 
+     * The results are considered invalid due to technical issues such as misplaced controls. Entry fees are refunded.
      */
     @XmlEnumValue("InvalidatedNoFee")
     INVALIDATED_NO_FEE("InvalidatedNoFee");
     private final String value;
 
-    EventClassStatus(String v) {
+    EventClassStatus(String v)
+    {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
-    public static EventClassStatus fromValue(String v) {
-        for (EventClassStatus c: EventClassStatus.values()) {
-            if (c.value.equals(v)) {
+    public static EventClassStatus fromValue(String v)
+    {
+        for (EventClassStatus c : EventClassStatus.values())
+        {
+            if (c.value.equals(v))
+            {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value()
+    {
+        return value;
     }
 
 }

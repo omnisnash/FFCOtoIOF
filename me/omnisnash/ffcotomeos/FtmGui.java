@@ -2,6 +2,8 @@ package me.omnisnash.ffcotomeos;
 
 import javafx.application.Platform;
 import javafx.beans.binding.BooleanBinding;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Orientation;
@@ -10,6 +12,8 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import me.omnisnash.ffcotomeos.logger.Logger;
+import me.omnisnash.ffcotomeos.parser.ESupportedFormat;
 
 import java.io.File;
 
@@ -18,28 +22,41 @@ public class FtmGui extends VBox
     private final Stage stage;
     private final ObservableList<String> logs;
     private IApplicationInteraction callback;
+    BooleanProperty running;
     private TextField txtInput;
     private TextField txtOrganisation;
     private TextField txtCompetitor;
+    private ListView<String> lstLogs;
+    private RadioButton rdbEo2003;
+    private RadioButton rdbEo2010;
+    private ProgressIndicator progressIndicator;
+    private Button btnExtract;
 
     public FtmGui(Stage mainStage, IApplicationInteraction listener)
     {
         stage = mainStage;
         callback = listener;
-
+        running = new SimpleBooleanProperty(false);
         logs = FXCollections.observableArrayList();
 
+        listenLog();
         buildGui();
+
     }
 
-    public void addLog(String log)
+    private void listenLog()
     {
-        Platform.runLater(() -> logs.add(log));
+        Logger.getInstance().addLogListener(log -> addLog(log));
     }
 
     public void clearLogs()
     {
         Platform.runLater(() -> logs.clear());
+    }
+
+    private void addLog(String log)
+    {
+        Platform.runLater(() -> logs.add(log));
     }
 
     private void buildGui()
@@ -52,22 +69,43 @@ public class FtmGui extends VBox
         HBox hbxExtract = new HBox();
         getChildren().add(hbxExtract);
 
-        Button btnExtract = new Button("Extract");
+        btnExtract = new Button("Extract");
         btnExtract.setMaxWidth(Double.MAX_VALUE);
         HBox.setHgrow(btnExtract, Priority.ALWAYS);
-        btnExtract.setOnAction(event -> callback.onButtonExtract(txtInput.getText(), txtOrganisation.getText(), txtCompetitor.getText()));
+        btnExtract.setOnAction(event ->
+        {
+            ESupportedFormat format;
+            if (rdbEo2003.isSelected())
+            {
+                format = ESupportedFormat.OE2003;
+            } else
+            {
+                format = ESupportedFormat.OE2010;
+            }
+            callback.onButtonExtract(txtInput.getText(), txtOrganisation.getText(), txtCompetitor.getText(), format);
+        });
         btnExtract.disableProperty().bind(BooleanBinding.booleanExpression(new BooleanBinding()
         {
             @Override
             protected boolean computeValue()
             {
-                bind(txtCompetitor.textProperty(), txtOrganisation.textProperty(), txtInput.textProperty());
-                return (txtOrganisation.getText().isEmpty() || txtInput.getText().isEmpty() || txtCompetitor.getText().isEmpty());
+                bind(txtCompetitor.textProperty(), txtOrganisation.textProperty(), txtInput.textProperty(), running);
+                return ((running.getValue() || txtOrganisation.getText().isEmpty() || txtInput.getText().isEmpty() || txtCompetitor.getText().isEmpty()));
             }
         }));
-        hbxExtract.getChildren().add(btnExtract);
 
-        ListView<String> lstLogs = new ListView<>(logs);
+        progressIndicator = new ProgressIndicator();
+        progressIndicator.setVisible(false);
+        progressIndicator.prefHeightProperty().bind(btnExtract.heightProperty());
+
+        Region rgnPadding = new Region();
+        rgnPadding.prefWidthProperty().bind(progressIndicator.widthProperty());
+
+        hbxExtract.getChildren().add(rgnPadding);
+        hbxExtract.getChildren().add(btnExtract);
+        hbxExtract.getChildren().add(progressIndicator);
+
+        lstLogs = new ListView<>(logs);
         lstLogs.setMaxHeight(Double.MAX_VALUE);
         VBox.setVgrow(lstLogs, Priority.ALWAYS);
         getChildren().add(lstLogs);
@@ -92,7 +130,8 @@ public class FtmGui extends VBox
         gpForm.add(txtInput, 1, line);
 
         Button btnInput = new Button("Browse...");
-        btnInput.setOnAction(event -> {
+        btnInput.setOnAction(event ->
+        {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Select FFCO CSV file");
             fileChooser.getExtensionFilters().addAll(
@@ -104,19 +143,39 @@ public class FtmGui extends VBox
             if (selectedFile != null)
             {
                 txtInput.setText(selectedFile.getAbsolutePath());
+                callback.onFileLoaded(selectedFile.getAbsolutePath());
 
-                if(txtCompetitor.getText().isEmpty())
+                if (txtCompetitor.getText().isEmpty())
                 {
                     txtCompetitor.setText(selectedFile.getParent() + File.separator + IConstant.DEFAULT_COMPETITOR_FILENAME);
                 }
 
-                if(txtOrganisation.getText().isEmpty())
+                if (txtOrganisation.getText().isEmpty())
                 {
                     txtOrganisation.setText(selectedFile.getParent() + File.separator + IConstant.DEFAULT_ORGANISATION_FILENAME);
                 }
             }
         });
         gpForm.add(btnInput, 2, line);
+
+        // OE format selection
+        HBox hbxOeFormat = new HBox();
+        hbxOeFormat.getStyleClass().add(IConstant.CSS.CLASS_RADIOBUTONS);
+
+        ToggleGroup rdbGroup = new ToggleGroup();
+
+        rdbEo2003 = new RadioButton(ESupportedFormat.OE2003.toString());
+        hbxOeFormat.getChildren().add(rdbEo2003);
+        rdbEo2003.setToggleGroup(rdbGroup);
+        rdbEo2003.setSelected(true);
+
+        rdbEo2010 = new RadioButton(ESupportedFormat.OE2010.toString());
+        hbxOeFormat.getChildren().add(rdbEo2010);
+        rdbEo2010.setToggleGroup(rdbGroup);
+
+        gpForm.add(new Label("Format:"), 0, ++line);
+        gpForm.add(hbxOeFormat, 1, line, column - 1, 1);
+
 
         gpForm.add(new Separator(Orientation.HORIZONTAL), 0, ++line, column, 1);
 
@@ -130,7 +189,8 @@ public class FtmGui extends VBox
         gpForm.add(txtOrganisation, 1, line);
 
         Button btnOrganisation = new Button("Browse...");
-        btnOrganisation.setOnAction(event -> {
+        btnOrganisation.setOnAction(event ->
+        {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Select XML organisation output");
             fileChooser.setInitialFileName(IConstant.DEFAULT_ORGANISATION_FILENAME);
@@ -157,7 +217,8 @@ public class FtmGui extends VBox
         gpForm.add(txtCompetitor, 1, line);
 
         Button btnCompetitor = new Button("Browse...");
-        btnCompetitor.setOnAction(event -> {
+        btnCompetitor.setOnAction(event ->
+        {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Select XML competitor output");
             fileChooser.setInitialFileName(IConstant.DEFAULT_COMPETITOR_FILENAME);
@@ -177,8 +238,37 @@ public class FtmGui extends VBox
         return gpForm;
     }
 
+    public void setFormat(ESupportedFormat format)
+    {
+        switch (format)
+        {
+            case OE2003:
+                rdbEo2003.setSelected(true);
+                break;
+            case OE2010:
+                rdbEo2010.setSelected(true);
+                break;
+        }
+    }
+
+    public void setProgressVisible(boolean visible)
+    {
+
+    }
+
+    public void setExportRunning(boolean isRunning)
+    {
+
+        Platform.runLater(() -> {
+            progressIndicator.setVisible(isRunning);
+            running.setValue(isRunning);
+        });
+    }
+
     public interface IApplicationInteraction
     {
-        void onButtonExtract(String input, String organisation, String competitor);
+        void onFileLoaded(String input);
+
+        void onButtonExtract(String input, String organisation, String competitor, ESupportedFormat format);
     }
 }

@@ -15,14 +15,13 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         Defines a geographical position, e.g. of a control.
- *       
- * 
+ * Defines a geographical position, e.g. of a control.
+ * <p>
+ * <p>
  * <p>Classe Java pour GeoPosition complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="GeoPosition">
  *   &lt;complexContent>
@@ -34,12 +33,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "GeoPosition")
-public class GeoPosition {
+public class GeoPosition
+{
 
     @XmlAttribute(name = "lng", required = true)
     protected double lng;
@@ -50,57 +48,55 @@ public class GeoPosition {
 
     /**
      * Obtient la valeur de la propriété lng.
-     * 
      */
-    public double getLng() {
+    public double getLng()
+    {
         return lng;
     }
 
     /**
      * Définit la valeur de la propriété lng.
-     * 
      */
-    public void setLng(double value) {
+    public void setLng(double value)
+    {
         this.lng = value;
     }
 
     /**
      * Obtient la valeur de la propriété lat.
-     * 
      */
-    public double getLat() {
+    public double getLat()
+    {
         return lat;
     }
 
     /**
      * Définit la valeur de la propriété lat.
-     * 
      */
-    public void setLat(double value) {
+    public void setLat(double value)
+    {
         this.lat = value;
     }
 
     /**
      * Obtient la valeur de la propriété alt.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getAlt() {
+    public Double getAlt()
+    {
         return alt;
     }
 
     /**
      * Définit la valeur de la propriété alt.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setAlt(Double value) {
+    public void setAlt(Double value)
+    {
         this.alt = value;
     }
 

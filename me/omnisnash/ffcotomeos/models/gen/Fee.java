@@ -8,28 +8,22 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
- * 
- *         A fee that applies when entering a class at a race or ordering a service.
- *       
- * 
+ * A fee that applies when entering a class at a race or ordering a service.
+ * <p>
+ * <p>
  * <p>Classe Java pour Fee complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Fee">
  *   &lt;complexContent>
@@ -60,24 +54,23 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Fee", propOrder = {
-    "id",
-    "name",
-    "amount",
-    "taxableAmount",
-    "percentage",
-    "taxablePercentage",
-    "validFromTime",
-    "validToTime",
-    "fromDateOfBirth",
-    "toDateOfBirth",
-    "extensions"
+        "id",
+        "name",
+        "amount",
+        "taxableAmount",
+        "percentage",
+        "taxablePercentage",
+        "validFromTime",
+        "validToTime",
+        "fromDateOfBirth",
+        "toDateOfBirth",
+        "extensions"
 })
-public class Fee {
+public class Fee
+{
 
     @XmlElement(name = "Id")
     protected Id id;
@@ -114,52 +107,50 @@ public class Fee {
 
     /**
      * Obtient la valeur de la propriété id.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Id }
-     *     
+     *
+     * @return possible object is
+     * {@link Id }
      */
-    public Id getId() {
+    public Id getId()
+    {
         return id;
     }
 
     /**
      * Définit la valeur de la propriété id.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Id }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Id }
      */
-    public void setId(Id value) {
+    public void setId(Id value)
+    {
         this.id = value;
     }
 
     /**
      * Gets the value of the name property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the name property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getName().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link LanguageString }
-     * 
-     * 
      */
-    public List<LanguageString> getName() {
-        if (name == null) {
+    public List<LanguageString> getName()
+    {
+        if (name == null)
+        {
             name = new ArrayList<LanguageString>();
         }
         return this.name;
@@ -167,269 +158,249 @@ public class Fee {
 
     /**
      * Obtient la valeur de la propriété amount.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Amount }
-     *     
+     *
+     * @return possible object is
+     * {@link Amount }
      */
-    public Amount getAmount() {
+    public Amount getAmount()
+    {
         return amount;
     }
 
     /**
      * Définit la valeur de la propriété amount.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Amount }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Amount }
      */
-    public void setAmount(Amount value) {
+    public void setAmount(Amount value)
+    {
         this.amount = value;
     }
 
     /**
      * Obtient la valeur de la propriété taxableAmount.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Amount }
-     *     
+     *
+     * @return possible object is
+     * {@link Amount }
      */
-    public Amount getTaxableAmount() {
+    public Amount getTaxableAmount()
+    {
         return taxableAmount;
     }
 
     /**
      * Définit la valeur de la propriété taxableAmount.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Amount }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Amount }
      */
-    public void setTaxableAmount(Amount value) {
+    public void setTaxableAmount(Amount value)
+    {
         this.taxableAmount = value;
     }
 
     /**
      * Obtient la valeur de la propriété percentage.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getPercentage() {
+    public Double getPercentage()
+    {
         return percentage;
     }
 
     /**
      * Définit la valeur de la propriété percentage.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setPercentage(Double value) {
+    public void setPercentage(Double value)
+    {
         this.percentage = value;
     }
 
     /**
      * Obtient la valeur de la propriété taxablePercentage.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
-    public Double getTaxablePercentage() {
+    public Double getTaxablePercentage()
+    {
         return taxablePercentage;
     }
 
     /**
      * Définit la valeur de la propriété taxablePercentage.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
-    public void setTaxablePercentage(Double value) {
+    public void setTaxablePercentage(Double value)
+    {
         this.taxablePercentage = value;
     }
 
     /**
      * Obtient la valeur de la propriété validFromTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getValidFromTime() {
+    public XMLGregorianCalendar getValidFromTime()
+    {
         return validFromTime;
     }
 
     /**
      * Définit la valeur de la propriété validFromTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setValidFromTime(XMLGregorianCalendar value) {
+    public void setValidFromTime(XMLGregorianCalendar value)
+    {
         this.validFromTime = value;
     }
 
     /**
      * Obtient la valeur de la propriété validToTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getValidToTime() {
+    public XMLGregorianCalendar getValidToTime()
+    {
         return validToTime;
     }
 
     /**
      * Définit la valeur de la propriété validToTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setValidToTime(XMLGregorianCalendar value) {
+    public void setValidToTime(XMLGregorianCalendar value)
+    {
         this.validToTime = value;
     }
 
     /**
      * Obtient la valeur de la propriété fromDateOfBirth.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getFromDateOfBirth() {
+    public XMLGregorianCalendar getFromDateOfBirth()
+    {
         return fromDateOfBirth;
     }
 
     /**
      * Définit la valeur de la propriété fromDateOfBirth.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setFromDateOfBirth(XMLGregorianCalendar value) {
+    public void setFromDateOfBirth(XMLGregorianCalendar value)
+    {
         this.fromDateOfBirth = value;
     }
 
     /**
      * Obtient la valeur de la propriété toDateOfBirth.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getToDateOfBirth() {
+    public XMLGregorianCalendar getToDateOfBirth()
+    {
         return toDateOfBirth;
     }
 
     /**
      * Définit la valeur de la propriété toDateOfBirth.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setToDateOfBirth(XMLGregorianCalendar value) {
+    public void setToDateOfBirth(XMLGregorianCalendar value)
+    {
         this.toDateOfBirth = value;
     }
 
     /**
      * Obtient la valeur de la propriété extensions.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extensions }
-     *     
+     *
+     * @return possible object is
+     * {@link Extensions }
      */
-    public Extensions getExtensions() {
+    public Extensions getExtensions()
+    {
         return extensions;
     }
 
     /**
      * Définit la valeur de la propriété extensions.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extensions }
      */
-    public void setExtensions(Extensions value) {
+    public void setExtensions(Extensions value)
+    {
         this.extensions = value;
     }
 
     /**
      * Obtient la valeur de la propriété type.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getType() {
-        if (type == null) {
+    public String getType()
+    {
+        if (type == null)
+        {
             return "Normal";
-        } else {
+        } else
+        {
             return type;
         }
     }
 
     /**
      * Définit la valeur de la propriété type.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setType(String value) {
+    public void setType(String value)
+    {
         this.type = value;
     }
 
     /**
      * Obtient la valeur de la propriété modifyTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getModifyTime() {
+    public XMLGregorianCalendar getModifyTime()
+    {
         return modifyTime;
     }
 
     /**
      * Définit la valeur de la propriété modifyTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setModifyTime(XMLGregorianCalendar value) {
+    public void setModifyTime(XMLGregorianCalendar value)
+    {
         this.modifyTime = value;
     }
 

@@ -8,24 +8,18 @@
 
 package me.omnisnash.ffcotomeos.models.gen;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         The postal address of a person or organisation.
- *       
- * 
+ * The postal address of a person or organisation.
+ * <p>
+ * <p>
  * <p>Classe Java pour Address complex type.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Address">
  *   &lt;complexContent>
@@ -44,19 +38,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Address", propOrder = {
-    "careOf",
-    "street",
-    "zipCode",
-    "city",
-    "state",
-    "country"
+        "careOf",
+        "street",
+        "zipCode",
+        "city",
+        "state",
+        "country"
 })
-public class Address {
+public class Address
+{
 
     @XmlElement(name = "CareOf")
     protected String careOf;
@@ -78,193 +71,177 @@ public class Address {
 
     /**
      * Obtient la valeur de la propriété careOf.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getCareOf() {
+    public String getCareOf()
+    {
         return careOf;
     }
 
     /**
      * Définit la valeur de la propriété careOf.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setCareOf(String value) {
+    public void setCareOf(String value)
+    {
         this.careOf = value;
     }
 
     /**
      * Obtient la valeur de la propriété street.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getStreet() {
+    public String getStreet()
+    {
         return street;
     }
 
     /**
      * Définit la valeur de la propriété street.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setStreet(String value) {
+    public void setStreet(String value)
+    {
         this.street = value;
     }
 
     /**
      * Obtient la valeur de la propriété zipCode.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getZipCode() {
+    public String getZipCode()
+    {
         return zipCode;
     }
 
     /**
      * Définit la valeur de la propriété zipCode.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setZipCode(String value) {
+    public void setZipCode(String value)
+    {
         this.zipCode = value;
     }
 
     /**
      * Obtient la valeur de la propriété city.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getCity() {
+    public String getCity()
+    {
         return city;
     }
 
     /**
      * Définit la valeur de la propriété city.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setCity(String value) {
+    public void setCity(String value)
+    {
         this.city = value;
     }
 
     /**
      * Obtient la valeur de la propriété state.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getState() {
+    public String getState()
+    {
         return state;
     }
 
     /**
      * Définit la valeur de la propriété state.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setState(String value) {
+    public void setState(String value)
+    {
         this.state = value;
     }
 
     /**
      * Obtient la valeur de la propriété country.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Country }
-     *     
+     *
+     * @return possible object is
+     * {@link Country }
      */
-    public Country getCountry() {
+    public Country getCountry()
+    {
         return country;
     }
 
     /**
      * Définit la valeur de la propriété country.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Country }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Country }
      */
-    public void setCountry(Country value) {
+    public void setCountry(Country value)
+    {
         this.country = value;
     }
 
     /**
      * Obtient la valeur de la propriété type.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getType() {
+    public String getType()
+    {
         return type;
     }
 
     /**
      * Définit la valeur de la propriété type.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setType(String value) {
+    public void setType(String value)
+    {
         this.type = value;
     }
 
     /**
      * Obtient la valeur de la propriété modifyTime.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getModifyTime() {
+    public XMLGregorianCalendar getModifyTime()
+    {
         return modifyTime;
     }
 
     /**
      * Définit la valeur de la propriété modifyTime.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
-    public void setModifyTime(XMLGregorianCalendar value) {
+    public void setModifyTime(XMLGregorianCalendar value)
+    {
         this.modifyTime = value;
     }
 

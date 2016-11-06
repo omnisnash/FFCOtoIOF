@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java pour RaceClassStatus.
- * 
+ * <p>
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * <p>
  * <pre>
@@ -30,83 +30,70 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "RaceClassStatus")
 @XmlEnum
-public enum RaceClassStatus {
+public enum RaceClassStatus
+{
 
 
     /**
-     * 
-     *             The start list draw has not been made for this class in this race.
-     *           
-     * 
+     * The start list draw has not been made for this class in this race.
      */
     @XmlEnumValue("StartTimesNotAllocated")
     START_TIMES_NOT_ALLOCATED("StartTimesNotAllocated"),
 
     /**
-     * 
-     *             The start list draw has been made for this class in this race.
-     *           
-     * 
+     * The start list draw has been made for this class in this race.
      */
     @XmlEnumValue("StartTimesAllocated")
     START_TIMES_ALLOCATED("StartTimesAllocated"),
 
     /**
-     * 
-     *             The class is not organised in this race, e.g. for classes that are organised in only some of the races in a multi-race event.
-     *           
-     * 
+     * The class is not organised in this race, e.g. for classes that are organised in only some of the races in a multi-race event.
      */
     @XmlEnumValue("NotUsed")
     NOT_USED("NotUsed"),
 
     /**
-     * 
-     *             The result list is complete for this class in this race.
-     *           
-     * 
+     * The result list is complete for this class in this race.
      */
     @XmlEnumValue("Completed")
     COMPLETED("Completed"),
 
     /**
-     * 
-     *             The results are considered invalid due to technical issues such as misplaced controls. Entry fees are not refunded.
-     *           
-     * 
+     * The results are considered invalid due to technical issues such as misplaced controls. Entry fees are not refunded.
      */
     @XmlEnumValue("Invalidated")
     INVALIDATED("Invalidated"),
 
     /**
-     * 
-     *             The results are considered invalid due to technical issues such as misplaced controls. Entry fees are refunded.
-     *           
-     * 
+     * The results are considered invalid due to technical issues such as misplaced controls. Entry fees are refunded.
      */
     @XmlEnumValue("InvalidatedNoFee")
     INVALIDATED_NO_FEE("InvalidatedNoFee");
     private final String value;
 
-    RaceClassStatus(String v) {
+    RaceClassStatus(String v)
+    {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
-    public static RaceClassStatus fromValue(String v) {
-        for (RaceClassStatus c: RaceClassStatus.values()) {
-            if (c.value.equals(v)) {
+    public static RaceClassStatus fromValue(String v)
+    {
+        for (RaceClassStatus c : RaceClassStatus.values())
+        {
+            if (c.value.equals(v))
+            {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value()
+    {
+        return value;
     }
 
 }
