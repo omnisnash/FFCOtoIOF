@@ -1,4 +1,4 @@
-package me.omnisnash.ffcotomeos;
+package me.omnisnash.ffcotomeos.gui;
 
 import javafx.application.Platform;
 import javafx.beans.binding.BooleanBinding;
@@ -13,17 +13,21 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import me.omnisnash.ffcotomeos.IConstant;
 import me.omnisnash.ffcotomeos.logger.Logger;
 import me.omnisnash.ffcotomeos.parser.ESupportedFormat;
 import me.omnisnash.ffcotomeos.parser.ExtractRequest;
 
 import java.io.File;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class FtmGui extends VBox
 {
-    private final static String TEXT_BROWSE = "Browse";
+    private String TEXT_BROWSE;
     private final Stage stage;
     private final ObservableList<String> logs;
+    private final ResourceBundle resource;
     private IApplicationInteraction callback;
     BooleanProperty running;
     private TextField txtInput;
@@ -40,10 +44,14 @@ public class FtmGui extends VBox
 
     public FtmGui(Stage mainStage, IApplicationInteraction listener)
     {
+
         stage = mainStage;
         callback = listener;
         running = new SimpleBooleanProperty(false);
         logs = FXCollections.observableArrayList();
+
+        resource = ResourceBundle.getBundle(IConstant.BUNDLE_GUI, Locale.getDefault());
+        TEXT_BROWSE = resource.getString("BUTTON_BROWSE");
 
         listenLog();
         buildGui();
@@ -78,7 +86,7 @@ public class FtmGui extends VBox
         HBox hbxExtract = new HBox();
         getChildren().add(hbxExtract);
 
-        btnExtract = new Button("Extract");
+        btnExtract = new Button(resource.getString("BUTTON_EXTRACT"));
         btnExtract.setMaxWidth(Double.MAX_VALUE);
         HBox.setHgrow(btnExtract, Priority.ALWAYS);
         btnExtract.setOnAction(event -> sendExtractRequest());
@@ -132,7 +140,7 @@ public class FtmGui extends VBox
         int column = 3;
 
         // Input CSV
-        Label lblInput = new Label("FFCO CSV file:");
+        Label lblInput = new Label(resource.getString("LABEL_INPUT_CSV"));
         gpForm.add(lblInput, 0, line);
 
         txtInput = new TextField();
@@ -144,7 +152,7 @@ public class FtmGui extends VBox
         btnInput.setOnAction(event ->
         {
             FileChooser fileChooser = new FileChooser();
-            fileChooser.setTitle("Select FFCO CSV file");
+            fileChooser.setTitle(resource.getString("FILE_CHOOSER_INPUT_CSV"));
             fileChooser.getExtensionFilters().addAll(
                     new FileChooser.ExtensionFilter("CSV Files", "*.csv"),
                     new FileChooser.ExtensionFilter("All Files", "*.*"));
@@ -191,18 +199,18 @@ public class FtmGui extends VBox
         hbxOeFormat.getChildren().add(rdbEo2010);
         rdbEo2010.setToggleGroup(rdbGroup);
 
-        gpForm.add(new Label("Format:"), 0, ++line);
+        gpForm.add(new Label(resource.getString("LABEL_FORMAT")), 0, ++line);
         gpForm.add(hbxOeFormat, 1, line, column - 1, 1);
 
         // Name invert
-        ckbInvertName = new CheckBox("Invert given / family name");
+        ckbInvertName = new CheckBox(resource.getString("CHECKBOX_INVERT_NAME"));
         ckbInvertName.setSelected(false);
         gpForm.add(ckbInvertName, 1, ++line, column - 1, 1);
 
         gpForm.add(new Separator(Orientation.HORIZONTAL), 0, ++line, column, 1);
 
         // Organisation XML
-        Label lblOrganisation = new Label("Organisation XML file:");
+        Label lblOrganisation = new Label(resource.getString("LABEL_OUTPUT_ORGANISATION"));
         gpForm.add(lblOrganisation, 0, ++line);
 
         txtOrganisation = new TextField();
@@ -214,7 +222,7 @@ public class FtmGui extends VBox
         btnOrganisation.setOnAction(event ->
         {
             FileChooser fileChooser = new FileChooser();
-            fileChooser.setTitle("Select XML organisation output");
+            fileChooser.setTitle(resource.getString("FILE_CHOOSER_OUTPUT_ORGANISATION"));
             fileChooser.setInitialFileName(IConstant.DEFAULT_ORGANISATION_FILENAME);
             fileChooser.getExtensionFilters().addAll(
                     new FileChooser.ExtensionFilter("XML Files", "*.xml"),
@@ -237,7 +245,7 @@ public class FtmGui extends VBox
         gpForm.add(btnOrganisation, 2, line);
 
         // Competitor XML
-        Label lblCompetitor = new Label("Competitor XML file:");
+        Label lblCompetitor = new Label(resource.getString("LABEL_OUTPUT_COMPETITOR"));
         gpForm.add(lblCompetitor, 0, ++line);
 
         txtCompetitor = new TextField();
@@ -249,7 +257,7 @@ public class FtmGui extends VBox
         btnCompetitor.setOnAction(event ->
         {
             FileChooser fileChooser = new FileChooser();
-            fileChooser.setTitle("Select XML competitor output");
+            fileChooser.setTitle(resource.getString("FILE_CHOOSER_OUTPUT_COMPETITOR"));
             fileChooser.setInitialFileName(IConstant.DEFAULT_COMPETITOR_FILENAME);
             fileChooser.getExtensionFilters().addAll(
                     new FileChooser.ExtensionFilter("XML Files", "*.xml"),

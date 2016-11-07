@@ -2,6 +2,7 @@ package me.omnisnash.ffcotomeos;
 
 import javafx.scene.Parent;
 import javafx.stage.Stage;
+import me.omnisnash.ffcotomeos.gui.FtmGui;
 import me.omnisnash.ffcotomeos.logger.Logger;
 import me.omnisnash.ffcotomeos.parser.ESupportedFormat;
 import me.omnisnash.ffcotomeos.parser.ExtractRequest;
