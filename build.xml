@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ffcotomeos" default="all">
+
+    <target name="jaxb-marshall">
+        <java classname="com.sun.tools.internal.xjc.XJCFacade">
+            <arg value="-p" />
+            <arg value="me.omnisnash.ffcotoiof.models.gen"/>
+            <arg value="./me/omnisnash/ffcotoiof/resources/IOF.xsd" />
+        </java>
+    </target>
+
+    <target name="native2ascii">
+        <mkdir dir="temp" />
+
+        <native2ascii src="./" dest="./temp" includes="**/*Bundle*.properties" ext=".properties"/>
+
+        <delete>
+            <fileset dir="." includes="*Bundle*.properties"/>
+        </delete>
+
+        <copy todir="./">
+            <fileset dir="./temp"/>
+        </copy>
+
+        <delete dir="./temp" />
+    </target>
+
+    <target name="all" depends="jaxb-marshall, native2ascii" />
+
+</project>
