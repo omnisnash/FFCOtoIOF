@@ -4,6 +4,7 @@ import javafx.scene.Parent;
 import javafx.stage.Stage;
 import me.omnisnash.ffcotomeos.logger.Logger;
 import me.omnisnash.ffcotomeos.parser.ESupportedFormat;
+import me.omnisnash.ffcotomeos.parser.ExtractRequest;
 import me.omnisnash.ffcotomeos.parser.OE2003.OE2003Parser;
 import me.omnisnash.ffcotomeos.parser.OE2010.OE2010Parser;
 
@@ -80,20 +81,20 @@ public class FtmController implements FtmGui.IApplicationInteraction
     }
 
     @Override
-    public void onButtonExtract(String input, String organisation, String competitor, ESupportedFormat format)
+    public void onButtonExtract(ExtractRequest request)
     {
         Thread t = new Thread(() -> {
             gui.setExportRunning(true);
             gui.setProgressVisible(true);
             gui.clearLogs();
 
-            switch (format)
+            switch (request.getFormat())
             {
                 case OE2003:
-                    new OE2003Parser().parse(input, organisation, competitor);
+                    new OE2003Parser().parse(request);
                     break;
                 case OE2010:
-                    new OE2010Parser().parse(input, organisation, competitor);
+                    new OE2010Parser().parse(request);
                     break;
             }
 

@@ -14,6 +14,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import me.omnisnash.ffcotomeos.logger.Logger;
 import me.omnisnash.ffcotomeos.parser.ESupportedFormat;
+import me.omnisnash.ffcotomeos.parser.ExtractRequest;
 
 import java.io.File;
 
@@ -72,18 +73,7 @@ public class FtmGui extends VBox
         btnExtract = new Button("Extract");
         btnExtract.setMaxWidth(Double.MAX_VALUE);
         HBox.setHgrow(btnExtract, Priority.ALWAYS);
-        btnExtract.setOnAction(event ->
-        {
-            ESupportedFormat format;
-            if (rdbEo2003.isSelected())
-            {
-                format = ESupportedFormat.OE2003;
-            } else
-            {
-                format = ESupportedFormat.OE2010;
-            }
-            callback.onButtonExtract(txtInput.getText(), txtOrganisation.getText(), txtCompetitor.getText(), format);
-        });
+        btnExtract.setOnAction(event -> sendExtractRequest());
         btnExtract.disableProperty().bind(BooleanBinding.booleanExpression(new BooleanBinding()
         {
             @Override
@@ -109,6 +99,26 @@ public class FtmGui extends VBox
         lstLogs.setMaxHeight(Double.MAX_VALUE);
         VBox.setVgrow(lstLogs, Priority.ALWAYS);
         getChildren().add(lstLogs);
+    }
+
+    private void sendExtractRequest()
+    {
+        ESupportedFormat format;
+        if (rdbEo2003.isSelected())
+        {
+            format = ESupportedFormat.OE2003;
+        } else
+        {
+            format = ESupportedFormat.OE2010;
+        }
+
+        ExtractRequest request = new ExtractRequest(format);
+        request.setInputtedFilePath(txtInput.getText());
+        request.setOrganisationsXmlPath(txtOrganisation.getText());
+        request.setCompetitorsXmlPath(txtCompetitor.getText());
+        //request.setInvertName();
+
+        callback.onButtonExtract(request);
     }
 
     private Node buildForm()
@@ -269,6 +279,6 @@ public class FtmGui extends VBox
     {
         void onFileLoaded(String input);
 
-        void onButtonExtract(String input, String organisation, String competitor, ESupportedFormat format);
+        void onButtonExtract(ExtractRequest request);
     }
 }

@@ -6,6 +6,7 @@ import me.omnisnash.ffcotomeos.logger.Logger;
 import me.omnisnash.ffcotomeos.models.gen.Class;
 import me.omnisnash.ffcotomeos.models.gen.*;
 import me.omnisnash.ffcotomeos.parser.AParser;
+import me.omnisnash.ffcotomeos.parser.ExtractRequest;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 import java.io.*;
@@ -192,12 +193,13 @@ public class OE2010Parser extends AParser
 
 
     @Override
-    public void parse(String inputFile, String organisationFile, String competitorsFile)
+    public void parse(ExtractRequest request)
     {
-        competitorXmlFilePath = competitorsFile;
-        organisationXmlFilePath = organisationFile;
+        competitorXmlFilePath = request.getCompetitorsXmlPath();
+        organisationXmlFilePath = request.getOrganisationsXmlPath();
+        invertName = request.isInvertName();
 
-        File input = new File(inputFile);
+        File input = new File(request.getInputtedFilePath());
 
         if (!input.isFile())
         {

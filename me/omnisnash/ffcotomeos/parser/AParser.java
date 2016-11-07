@@ -17,13 +17,15 @@ public abstract class AParser
 {
     protected OrganisationList organisations;
     protected CompetitorList competitors;
+    protected boolean invertName;
 
     public AParser()
     {
+        invertName = false;
         initXmlHeaders();
     }
 
-    protected abstract void parse(String inputFile, String organisationFile, String competitorsFile);
+    protected abstract void parse(ExtractRequest request);
 
     private void initXmlHeaders()
     {
