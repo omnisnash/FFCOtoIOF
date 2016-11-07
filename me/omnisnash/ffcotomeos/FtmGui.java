@@ -5,6 +5,7 @@ import javafx.beans.binding.BooleanBinding;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.geometry.Orientation;
 import javafx.scene.Node;
@@ -20,6 +21,7 @@ import java.io.File;
 
 public class FtmGui extends VBox
 {
+    private final static String TEXT_BROWSE = "Browse";
     private final Stage stage;
     private final ObservableList<String> logs;
     private IApplicationInteraction callback;
@@ -30,9 +32,11 @@ public class FtmGui extends VBox
     private ListView<String> lstLogs;
     private RadioButton rdbEo2003;
     private RadioButton rdbEo2010;
-    private ProgressIndicator progressIndicator;
     private Button btnExtract;
     private CheckBox ckbInvertName;
+    private GridPane gpForm;
+    private ProgressIndicator pgiRunning;
+    private StackPane spFormContainer;
 
     public FtmGui(Stage mainStage, IApplicationInteraction listener)
     {
@@ -58,7 +62,10 @@ public class FtmGui extends VBox
 
     private void addLog(String log)
     {
-        Platform.runLater(() -> logs.add(log));
+        Platform.runLater(() -> {
+            logs.add(log);
+            lstLogs.scrollTo(log);
+        });
     }
 
     private void buildGui()
@@ -85,16 +92,7 @@ public class FtmGui extends VBox
             }
         }));
 
-        progressIndicator = new ProgressIndicator();
-        progressIndicator.setVisible(false);
-        progressIndicator.prefHeightProperty().bind(btnExtract.heightProperty());
-
-        Region rgnPadding = new Region();
-        rgnPadding.prefWidthProperty().bind(progressIndicator.widthProperty());
-
-        hbxExtract.getChildren().add(rgnPadding);
         hbxExtract.getChildren().add(btnExtract);
-        hbxExtract.getChildren().add(progressIndicator);
 
         lstLogs = new ListView<>(logs);
         lstLogs.setMaxHeight(Double.MAX_VALUE);
@@ -124,9 +122,11 @@ public class FtmGui extends VBox
 
     private Node buildForm()
     {
-        GridPane gpForm = new GridPane();
-        gpForm.getStyleClass().add(IConstant.CSS.CLASS_GRIDPANE);
+        spFormContainer = new StackPane();
 
+        gpForm = new GridPane();
+        gpForm.getStyleClass().add(IConstant.CSS.CLASS_GRIDPANE);
+        spFormContainer.getChildren().add(gpForm);
 
         int line = 0;
         int column = 3;
@@ -140,7 +140,7 @@ public class FtmGui extends VBox
         GridPane.setHgrow(txtInput, Priority.ALWAYS);
         gpForm.add(txtInput, 1, line);
 
-        Button btnInput = new Button("Browse...");
+        Button btnInput = new Button(TEXT_BROWSE);
         btnInput.setOnAction(event ->
         {
             FileChooser fileChooser = new FileChooser();
@@ -148,6 +148,13 @@ public class FtmGui extends VBox
             fileChooser.getExtensionFilters().addAll(
                     new FileChooser.ExtensionFilter("CSV Files", "*.csv"),
                     new FileChooser.ExtensionFilter("All Files", "*.*"));
+
+            File file = new File(txtInput.getText());
+            if(!txtInput.getText().isEmpty() && file.getParentFile().exists())
+            {
+                fileChooser.setInitialFileName(file.getName());
+                fileChooser.setInitialDirectory(file.getParentFile());
+            }
 
             File selectedFile = fileChooser.showOpenDialog(stage);
 
@@ -188,7 +195,7 @@ public class FtmGui extends VBox
         gpForm.add(hbxOeFormat, 1, line, column - 1, 1);
 
         // Name invert
-        ckbInvertName = new CheckBox("Invert given/family name");
+        ckbInvertName = new CheckBox("Invert given / family name");
         ckbInvertName.setSelected(false);
         gpForm.add(ckbInvertName, 1, ++line, column - 1, 1);
 
@@ -203,7 +210,7 @@ public class FtmGui extends VBox
         GridPane.setHgrow(txtOrganisation, Priority.ALWAYS);
         gpForm.add(txtOrganisation, 1, line);
 
-        Button btnOrganisation = new Button("Browse...");
+        Button btnOrganisation = new Button(TEXT_BROWSE);
         btnOrganisation.setOnAction(event ->
         {
             FileChooser fileChooser = new FileChooser();
@@ -212,6 +219,13 @@ public class FtmGui extends VBox
             fileChooser.getExtensionFilters().addAll(
                     new FileChooser.ExtensionFilter("XML Files", "*.xml"),
                     new FileChooser.ExtensionFilter("All Files", "*.*"));
+
+            File file = new File(txtOrganisation.getText());
+            if(!txtInput.getText().isEmpty() && file.getParentFile().exists())
+            {
+                fileChooser.setInitialFileName(file.getName());
+                fileChooser.setInitialDirectory(file.getParentFile());
+            }
 
             File selectedFile = fileChooser.showSaveDialog(stage);
 
@@ -231,7 +245,7 @@ public class FtmGui extends VBox
         GridPane.setHgrow(txtCompetitor, Priority.ALWAYS);
         gpForm.add(txtCompetitor, 1, line);
 
-        Button btnCompetitor = new Button("Browse...");
+        Button btnCompetitor = new Button(TEXT_BROWSE);
         btnCompetitor.setOnAction(event ->
         {
             FileChooser fileChooser = new FileChooser();
@@ -240,6 +254,13 @@ public class FtmGui extends VBox
             fileChooser.getExtensionFilters().addAll(
                     new FileChooser.ExtensionFilter("XML Files", "*.xml"),
                     new FileChooser.ExtensionFilter("All Files", "*.*"));
+
+            File file = new File(txtCompetitor.getText());
+            if(!txtInput.getText().isEmpty() && file.getParentFile().exists())
+            {
+                fileChooser.setInitialFileName(file.getName());
+                fileChooser.setInitialDirectory(file.getParentFile());
+            }
 
             File selectedFile = fileChooser.showSaveDialog(stage);
 
@@ -250,7 +271,8 @@ public class FtmGui extends VBox
         });
         gpForm.add(btnCompetitor, 2, line);
 
-        return gpForm;
+
+        return spFormContainer;
     }
 
     public void setFormat(ESupportedFormat format)
@@ -266,17 +288,25 @@ public class FtmGui extends VBox
         }
     }
 
-    public void setProgressVisible(boolean visible)
-    {
-
-    }
-
     public void setExportRunning(boolean isRunning)
     {
-
         Platform.runLater(() -> {
-            progressIndicator.setVisible(isRunning);
+
             running.setValue(isRunning);
+
+            if(isRunning)
+            {
+                gpForm.setDisable(true);
+
+                pgiRunning = new ProgressIndicator();
+                spFormContainer.getChildren().add(pgiRunning);
+            }
+            else
+            {
+                gpForm.setDisable(false);
+
+                spFormContainer.getChildren().remove(pgiRunning);
+            }
         });
     }
 

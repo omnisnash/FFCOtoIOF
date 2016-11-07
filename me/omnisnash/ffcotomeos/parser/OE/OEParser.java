@@ -239,6 +239,12 @@ public class OEParser extends AParser
 
         File input = new File(request.getInputtedFilePath());
 
+        if (!input.exists())
+        {
+            Logger.getInstance().log("File '" + input.getName() + "' doesn't exist ! Aborting.");
+            return;
+        }
+
         if (!input.isFile())
         {
             Logger.getInstance().log("File '" + input.getName() + "' isn't a file ! Aborting.");

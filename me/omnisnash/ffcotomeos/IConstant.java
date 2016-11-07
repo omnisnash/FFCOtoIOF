@@ -4,7 +4,7 @@ public class IConstant
 {
     public static final String APPLICATION_NAME = "FFCO to IOF";
     public static final String APPLICATION_LINK = "gitlab.com/omnisnash/FFCOtoIOF";
-    public static final String APPLICATION_VERSION = "1.1.2";
+    public static final String APPLICATION_VERSION = "1.1.3";
     public static final String IOF_VERSION = "3.0";
 
 

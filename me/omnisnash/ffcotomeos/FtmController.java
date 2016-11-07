@@ -84,12 +84,11 @@ public class FtmController implements FtmGui.IApplicationInteraction
     {
         Thread t = new Thread(() -> {
             gui.setExportRunning(true);
-            gui.setProgressVisible(true);
             gui.clearLogs();
 
             new OEParser().parse(request);
 
-            gui.setProgressVisible(false);
+
             gui.setExportRunning(false);
         });
 
