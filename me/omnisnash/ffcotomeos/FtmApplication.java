@@ -20,7 +20,7 @@ public class FtmApplication extends Application
         Scene scene = new Scene(controller.getGui());
 
         stage.setScene(scene);
-        stage.setTitle(IConstant.APPLICATION_NAME);
+        stage.setTitle(IConstant.APPLICATION_NAME + " - v." + IConstant.APPLICATION_VERSION);
 
         stage.show();
     }
