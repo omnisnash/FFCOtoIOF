@@ -2,6 +2,7 @@
 <project name="ffcotomeos" default="all">
 
     <target name="jaxb-marshall">
+        <mkdir dir="me/omnisnash/ffcotoiof/models/gen" />
         <java classname="com.sun.tools.internal.xjc.XJCFacade">
             <arg value="-p" />
             <arg value="me.omnisnash.ffcotoiof.models.gen"/>
