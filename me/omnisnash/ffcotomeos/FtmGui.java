@@ -32,6 +32,7 @@ public class FtmGui extends VBox
     private RadioButton rdbEo2010;
     private ProgressIndicator progressIndicator;
     private Button btnExtract;
+    private CheckBox ckbInvertName;
 
     public FtmGui(Stage mainStage, IApplicationInteraction listener)
     {
@@ -116,7 +117,7 @@ public class FtmGui extends VBox
         request.setInputtedFilePath(txtInput.getText());
         request.setOrganisationsXmlPath(txtOrganisation.getText());
         request.setCompetitorsXmlPath(txtCompetitor.getText());
-        //request.setInvertName();
+        request.setInvertName(ckbInvertName.isSelected());
 
         callback.onButtonExtract(request);
     }
@@ -186,6 +187,10 @@ public class FtmGui extends VBox
         gpForm.add(new Label("Format:"), 0, ++line);
         gpForm.add(hbxOeFormat, 1, line, column - 1, 1);
 
+        // Name invert
+        ckbInvertName = new CheckBox("Invert given/family name");
+        ckbInvertName.setSelected(false);
+        gpForm.add(ckbInvertName, 1, ++line, column - 1, 1);
 
         gpForm.add(new Separator(Orientation.HORIZONTAL), 0, ++line, column, 1);
 

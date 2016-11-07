@@ -20,7 +20,7 @@ public class IConstant
 
     public class CSS
     {
-        public static final String CLASS_BOX = "box";
+        public static final String CLASS_BOX = "container-box";
         public static final String CLASS_GRIDPANE = "gridpane";
         public static final String CLASS_RADIOBUTONS = "box-radiobutton";
     }

@@ -140,8 +140,8 @@ public class OE2003Parser extends AParser
         person.getId().add(idPerson);
 
         PersonName personName = new PersonName();
-        personName.setGiven(item.getCompetitorLastName());
-        personName.setFamily(item.getCompetitorFirstName());
+        personName.setGiven(invertName ? item.getCompetitorFirstName() : item.getCompetitorLastName());
+        personName.setFamily(invertName ? item.getCompetitorLastName() : item.getCompetitorFirstName());
         person.setName(personName);
         person.setSex(item.getCompetitorSex());
 
