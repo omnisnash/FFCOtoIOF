@@ -25,7 +25,7 @@ public abstract class AParser
         initXmlHeaders();
     }
 
-    protected abstract void parse(ExtractRequest request);
+    public abstract void parse(ExtractRequest request);
 
     private void initXmlHeaders()
     {

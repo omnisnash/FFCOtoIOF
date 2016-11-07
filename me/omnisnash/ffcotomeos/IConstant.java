@@ -17,6 +17,7 @@ public class IConstant
     public static final String DEFAULT_PUNCHING_SYSTEM = "SI";
     public static final String DEFAULT_COUNTRY = "France";
     public static final String DEFAULT_COUNTRY_CODE = "FRA";
+    public static final String OE_FILE_ENCODING = "ISO8859_1";
 
     public class CSS
     {

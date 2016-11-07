@@ -5,8 +5,7 @@ import javafx.stage.Stage;
 import me.omnisnash.ffcotomeos.logger.Logger;
 import me.omnisnash.ffcotomeos.parser.ESupportedFormat;
 import me.omnisnash.ffcotomeos.parser.ExtractRequest;
-import me.omnisnash.ffcotomeos.parser.OE2003.OE2003Parser;
-import me.omnisnash.ffcotomeos.parser.OE2010.OE2010Parser;
+import me.omnisnash.ffcotomeos.parser.OE.OEParser;
 
 import java.io.*;
 
@@ -88,15 +87,7 @@ public class FtmController implements FtmGui.IApplicationInteraction
             gui.setProgressVisible(true);
             gui.clearLogs();
 
-            switch (request.getFormat())
-            {
-                case OE2003:
-                    new OE2003Parser().parse(request);
-                    break;
-                case OE2010:
-                    new OE2010Parser().parse(request);
-                    break;
-            }
+            new OEParser().parse(request);
 
             gui.setProgressVisible(false);
             gui.setExportRunning(false);

@@ -1,12 +1,15 @@
-package me.omnisnash.ffcotomeos.parser.OE2010;
+package me.omnisnash.ffcotomeos.parser.OE;
 
 import com.sun.org.apache.xerces.internal.jaxp.datatype.DatatypeFactoryImpl;
 import me.omnisnash.ffcotomeos.IConstant;
 import me.omnisnash.ffcotomeos.logger.Logger;
-import me.omnisnash.ffcotomeos.models.gen.Class;
 import me.omnisnash.ffcotomeos.models.gen.*;
+import me.omnisnash.ffcotomeos.models.gen.Class;
 import me.omnisnash.ffcotomeos.parser.AParser;
 import me.omnisnash.ffcotomeos.parser.ExtractRequest;
+import me.omnisnash.ffcotomeos.parser.OE.item.AOEItem;
+import me.omnisnash.ffcotomeos.parser.OE.item.OE2003Item;
+import me.omnisnash.ffcotomeos.parser.OE.item.OE2010Item;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 import java.io.*;
@@ -17,47 +20,61 @@ import java.util.Map;
 import static me.omnisnash.ffcotomeos.IConstant.DEFAULT_COUNTRY;
 import static me.omnisnash.ffcotomeos.IConstant.DEFAULT_COUNTRY_CODE;
 
-public class OE2010Parser extends AParser
+public class OEParser extends AParser
 {
     private Map<String, Organisation> parsedOrganisation;
     private String competitorXmlFilePath;
     private String organisationXmlFilePath;
+    private ExtractRequest request;
 
-    public OE2010Parser()
+    public OEParser()
     {
         super();
         parsedOrganisation = new HashMap<>();
     }
 
-    private void parseInputCsv(File inputFile)
+    private void parseInputtedCsvFile(File inputtedFile)
     {
-        Logger.getInstance().log("Starting OE 2010 CSV parsing.");
+        Logger.getInstance().log("Starting " + request.getFormat().toString() + " CSV parsing.");
 
         FileInputStream fis = null;
 
         try
         {
 
-            fis = new FileInputStream(inputFile);
-            BufferedReader br = new BufferedReader(new InputStreamReader(fis, "ISO8859_1"));
+            fis = new FileInputStream(inputtedFile);
+            BufferedReader br = new BufferedReader(new InputStreamReader(fis, IConstant.OE_FILE_ENCODING));
 
-            String line;
-
-            line = br.readLine();
+            // CSV header checking
+            String line = br.readLine();
             if (line == null)
             {
-                Logger.getInstance().log("File '" + inputFile.getName() + "' isn't a valid CSV ! Aborting.");
+                Logger.getInstance().log("File '" + inputtedFile.getName() + "' isn't a valid CSV ! Aborting.");
                 return;
-            } else if (!line.equals(IConstant.OE2010_CSV_HEADER))
-            {
-                Logger.getInstance().log("WARN : the csv header mismatch with the official FFCO OE2003 CSV header. Generated XML may contain errors (expected header : " + IConstant.OE2003_CSV_HEADER + ")");
-                Logger.getInstance().log("Generation could fails ! Expected header :");
-                Logger.getInstance().log(IConstant.OE2010_CSV_HEADER);
             }
+
+            String header = "";
+            switch (request.getFormat())
+            {
+                case OE2003:
+                    header =IConstant.OE2003_CSV_HEADER;
+                    break;
+                case OE2010:
+                    header =IConstant.OE2010_CSV_HEADER;
+                    break;
+            }
+
+            if(!line.equals(header))
+            {
+                Logger.getInstance().log("WARN : the csv header mismatch with the official FFCO " + request.getFormat().toString() + " CSV header");
+                Logger.getInstance().log("Generation could fails ! Expected header :");
+                Logger.getInstance().log(header);
+            }
+
 
             while ((line = br.readLine()) != null)
             {
-                handleCsvLine(line);
+                handleOEItem(line);
             }
 
             Logger.getInstance().log("Parsing completed.");
@@ -65,19 +82,24 @@ public class OE2010Parser extends AParser
             Logger.getInstance().log(competitors.getCompetitor().size() + " competitor(s) parsed.");
 
             exportToXml(competitorXmlFilePath, organisationXmlFilePath);
-        } catch (FileNotFoundException e)
+        }
+        catch (FileNotFoundException e)
         {
-            Logger.getInstance().log("File '" + inputFile.getName() + "' doesn't exist ! Aborting.");
-        } catch (IOException e)
+            Logger.getInstance().log("File '" + inputtedFile.getName() + "' doesn't exist ! Aborting.");
+        }
+        catch (IOException e)
         {
             Logger.getInstance().log("Error during CSV parsing. Aborting.");
-        } catch (ArrayIndexOutOfBoundsException e)
+        }
+        catch (ArrayIndexOutOfBoundsException e)
         {
             Logger.getInstance().log("Invalid CSV line. Aborting.");
-        } catch (Exception e)
+        }
+        catch (Exception e)
         {
             Logger.getInstance().log("Unknown error. Exportation fail.");
-        } finally
+        }
+        finally
         {
             if (fis != null)
             {
@@ -92,14 +114,23 @@ public class OE2010Parser extends AParser
         }
     }
 
-    private void handleCsvLine(String line) throws ArrayIndexOutOfBoundsException
+    private void handleOEItem(String line) throws ArrayIndexOutOfBoundsException
     {
-        OE2010Item item;
+        AOEItem item = null;
 
         try
         {
-            item = new OE2010Item(line);
-        } catch (ArrayIndexOutOfBoundsException e)
+            switch (request.getFormat())
+            {
+                case OE2003:
+                    item = new OE2003Item(line);
+                    break;
+                case OE2010:
+                    item = new OE2010Item(line);
+                    break;
+            }
+        }
+        catch (ArrayIndexOutOfBoundsException e)
         {
             throw e;
         }
@@ -118,7 +149,7 @@ public class OE2010Parser extends AParser
         competitors.getCompetitor().add(competitor);
     }
 
-    private Competitor parseCompetitor(OE2010Item item)
+    private Competitor parseCompetitor(AOEItem item)
     {
         Competitor competitor = new Competitor();
 
@@ -145,9 +176,6 @@ public class OE2010Parser extends AParser
         person.setName(personName);
         person.setSex(item.getCompetitorSex());
 
-        System.out.println(item.getCompetitorSex());
-
-
         try
         {
             person.setBirthDate(DatatypeFactoryImpl.newInstance().newXMLGregorianCalendar(new GregorianCalendar(Integer.parseInt(item.getCompetitorBirthYear()), 01, 01)));
@@ -173,7 +201,7 @@ public class OE2010Parser extends AParser
         return competitor;
     }
 
-    private Organisation parseOrganisation(OE2010Item item)
+    private Organisation parseOrganisation(AOEItem item)
     {
         Organisation organisation = new Organisation();
         organisation.setType("Club");
@@ -193,8 +221,18 @@ public class OE2010Parser extends AParser
 
 
     @Override
-    public void parse(ExtractRequest request)
+    public void parse(ExtractRequest extractRequest)
     {
+        request = extractRequest;
+
+        if(request == null)
+        {
+            Logger.getInstance().log("Invalid extraction request ! Aborting.");
+            return;
+        }
+
+        parsedOrganisation.clear();
+
         competitorXmlFilePath = request.getCompetitorsXmlPath();
         organisationXmlFilePath = request.getOrganisationsXmlPath();
         invertName = request.isInvertName();
@@ -207,6 +245,6 @@ public class OE2010Parser extends AParser
             return;
         }
 
-        parseInputCsv(input);
+        parseInputtedCsvFile(input);
     }
 }
