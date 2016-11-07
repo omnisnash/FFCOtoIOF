@@ -142,6 +142,10 @@ public class OE2010Parser extends AParser
         personName.setGiven(item.getCompetitorLastName());
         personName.setFamily(item.getCompetitorFirstName());
         person.setName(personName);
+        person.setSex(item.getCompetitorSex());
+
+        System.out.println(item.getCompetitorSex());
+
 
         try
         {

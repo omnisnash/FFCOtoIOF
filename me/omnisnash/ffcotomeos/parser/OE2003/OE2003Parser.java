@@ -142,6 +142,7 @@ public class OE2003Parser extends AParser
         personName.setGiven(item.getCompetitorLastName());
         personName.setFamily(item.getCompetitorFirstName());
         person.setName(personName);
+        person.setSex(item.getCompetitorSex());
 
         try
         {
