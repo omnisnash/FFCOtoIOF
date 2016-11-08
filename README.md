@@ -18,6 +18,11 @@ These XML files respond to the [IOF-XML normalisation](http://www.orienteering.o
 3. Change the output location of generated files if needed (by default, the files are generated at the same location than the inputted members list file);
 4. Click on the "Extract" button.
 
+## Download
+You can download the runnable Jar [here](https://gitlab.com/omnisnash/FFCOtoIOF/raw/master/FFCOtoIOF.jar).
+
+A [Java 8 version](https://www.java.com/fr/download/) is required to run FFCO to IOF.
+
 
 
 
