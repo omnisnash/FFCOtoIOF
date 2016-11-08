@@ -1,9 +1,4 @@
-
 # Created by https://www.gitignore.io/api/java
-
-### Custom ###
-me/omnisnash/ffcotoiof/models/gen/
-
 
 ### Java ###
 *.class
@@ -18,3 +13,7 @@ me/omnisnash/ffcotoiof/models/gen/
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+### Custom ###
+me/omnisnash/ffcotoiof/models/gen/
+!FFCOtoIOF.jar
